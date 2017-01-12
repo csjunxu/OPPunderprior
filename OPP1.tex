@@ -118,6 +118,7 @@ orthogonal Procrustes problem, pratially known priors
 \vspace{\fill}\newpage
 
 \section{Introduction}
+The famous orthogonal Procrustes problem can be used in many research area.
 
 \section{Definition of the Probelm and Solution}
 Let $\mathbf{A},\mathbf{B}\in \mathcal{R}^{n\times m}$ be two given data matrices. Define $\mathbf{X}\in\mathcal{R}^{n\times p}$ and $\mathbf{P}\in\mathcal{R}^{n\times q}$ where $p+q=n$. $\mathbf{X}$ is the partially known prior which could be used to guide the solutions of $\mathbf{P}$. We formulate the orthogonal Procrustes problem with partially known priors as:
@@ -128,6 +129,9 @@ s.t.
 \quad
 \mathbf{P}^{\top}\mathbf{P} = \mathbf{I}_{q\times q}, \mathbf{X}^{\top}\mathbf{P} = \mathbf{0}_{p\times q}.
 \end{equation} 
+In fact, as have been proofed, if the matrix $\mathbf{\mathbf{B}\mathbf{A}^{\top}}$ has no zero singular value, then the solution of  
+$\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$ is unique and we do not need any preceding results.
+
 We crop the matrix $\mathbf{A}$ into two parts: $\mathbf{A}_{X}\in\mathcal{R}^{p\times m}$ and $\mathbf{A}_{P}\in\mathcal{R}^{q\times m}$ to interact with $\mathbf{X}$ and $\mathbf{P}$, respectively. Then we have 
 \begin{equation}
 \begin{split}
@@ -157,10 +161,8 @@ is $\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}$ and $\ma
 (\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top} = \mathbf{U}\mathbf{\Sigma}\mathbf{V}^{\top}
 \end{equation}
 
-\emph{proof}:
+\emph{proof}: 
 
-In fact, as have been proofed, if the matrix $\mathbf{\mathbf{B}\mathbf{A}^{\top}}$ has no zero singular value, then the solution of  
-$\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$ is unique and we do not need any preceding results.
 
 
 
