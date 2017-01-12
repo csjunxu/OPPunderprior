@@ -1,0 +1,147 @@
+%% VERSION 27 MAY 1999
+%%
+%% This is `psycho10.clo', a modification of file `size10.clo' for use with
+%% psychometrika.cls.
+%%
+%% Created for the Psychometric Society by Integre Technical Publishing.
+%%
+%% This file may be freely distributed and modified, 
+%% but note and date all changes with comments.
+%% 
+%% \CharacterTable
+%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%%   Digits        \0\1\2\3\4\5\6\7\8\9
+%%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%%   Dollar        \$     Percent       \%     Ampersand     \&
+%%   Acute accent  \'     Left paren    \(     Right paren   \)
+%%   Asterisk      \*     Plus          \+     Comma         \,
+%%   Minus         \-     Point         \.     Solidus       \/
+%%   Colon         \:     Semicolon     \;     Less than     \<
+%%   Equals        \=     Greater than  \>     Question mark \?
+%%   Commercial at \@     Left bracket  \[     Backslash     \\
+%%   Right bracket \]     Circumflex    \^     Underscore    \_
+%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%%   Right brace   \}     Tilde         \~}
+\ProvidesFile{psycho10.clo}
+              [1998/06/12 v0.1
+      Standard LaTeX file (size option)]
+%% Use MathTime font layout and extended font.
+%\RequirePackage[mtbold]{mathtime}
+%% Restore default \tt font to Computer Modern, rather than Courier
+%\DeclareFontShape{OT1}{cmtt}{m}{n}{<->s * cmtt10}{}
+%\renewcommand{\ttdefault}{cmtt}
+
+\renewcommand\normalsize{%
+   \@setfontsize\normalsize\@xpt\@xiipt
+   \abovedisplayskip 9\p@ \@plus2\p@ \@minus2\p@
+   \abovedisplayshortskip \abovedisplayskip %\z@ \@plus3\p@
+   \belowdisplayshortskip \abovedisplayskip %6\p@ \@plus3\p@ \@minus3\p@
+   \belowdisplayskip \abovedisplayskip
+   \let\@listi\@listI}
+\normalsize
+\newcommand\small{%
+   \@setfontsize\small\@ixpt{11}%
+   \abovedisplayskip 8.5\p@ \@plus3\p@ \@minus4\p@
+   \abovedisplayshortskip \z@ \@plus2\p@
+   \belowdisplayshortskip 4\p@ \@plus2\p@ \@minus2\p@
+   \def\@listi{\leftmargin\leftmargini
+               \topsep 4\p@ \@plus2\p@ \@minus2\p@
+               \parsep 2\p@ \@plus\p@ \@minus\p@
+               \itemsep \parsep}%
+   \belowdisplayskip \abovedisplayskip
+}
+\newcommand\frontsize{\@setfontsize\frontsize\@viiipt{10}}
+\newcommand\footnotesize{%
+   \@setfontsize\footnotesize\@viiipt{9}%
+   \abovedisplayskip 6\p@ \@plus2\p@ \@minus4\p@
+   \abovedisplayshortskip \z@ \@plus\p@
+   \belowdisplayshortskip 3\p@ \@plus\p@ \@minus2\p@
+   \def\@listi{\leftmargin\leftmargini
+               \topsep 3\p@ \@plus\p@ \@minus\p@
+               \parsep 2\p@ \@plus\p@ \@minus\p@
+               \itemsep \parsep}%
+   \belowdisplayskip \abovedisplayskip
+}
+\newcommand\tocsize{\@setfontsize\tocsize\@ixpt{12}}
+\newcommand\scriptsize{\@setfontsize\scriptsize\@viipt\@viiipt}
+\newcommand\tiny{\@setfontsize\tiny\@vpt\@vipt}
+\newcommand\large{\@setfontsize\large\@xiipt{14}}
+\newcommand\Large{\@setfontsize\Large\@xivpt{18}}
+\newcommand\LARGE{\@setfontsize\LARGE\@xviipt{20}}
+\newcommand\huge{\@setfontsize\huge\@xxvpt{26}}
+\newcommand\Huge{\@setfontsize\Huge\@xxvpt{30}}
+\if@twocolumn
+  \setlength\parindent{20\p@}
+\else
+  \setlength\parindent{20\p@}
+\fi
+\setlength\smallskipamount{3\p@ \@plus 1\p@ \@minus 1\p@}
+\setlength\medskipamount{6\p@ \@plus 2\p@ \@minus 2\p@}
+\setlength\bigskipamount{12\p@ \@plus 4\p@ \@minus 4\p@}
+\setlength\headheight{12\p@}
+\setlength\headsep   {14\p@}
+\setlength\topskip   {10\p@}
+\setlength\footskip{29\p@}
+\if@compatibility \setlength\maxdepth{4\p@} \else
+\setlength\maxdepth{.5\topskip} \fi
+\setlength\textwidth{32pc}
+\if@compatibility\else
+  \@settopoint\textwidth
+\fi
+\setlength\textheight{51\baselineskip}
+\addtolength\textheight{\topskip}
+\if@twocolumn
+ \setlength\marginparsep {10\p@}
+\else
+  \setlength\marginparsep{11\p@}
+\fi
+\setlength\marginparpush{5\p@}
+\setlength\oddsidemargin    {60\p@}
+\setlength\evensidemargin  {60\p@}
+\setlength\topmargin{25pt} %{\paperheight}
+\setlength\footnotesep{12.65\p@}
+\setlength{\skip\footins}{9\p@ \@plus 4\p@ \@minus 2\p@}
+\setlength\floatsep    {12\p@ \@plus 2\p@ \@minus 2\p@}
+\setlength\textfloatsep{20\p@ \@plus 2\p@ \@minus 4\p@}
+\setlength\intextsep   {12\p@ \@plus 2\p@ \@minus 2\p@}
+\setlength\dblfloatsep    {12\p@ \@plus 2\p@ \@minus 2\p@}
+\setlength\dbltextfloatsep{20\p@ \@plus 2\p@ \@minus 4\p@}
+\setlength\@fptop{0\p@ \@plus 1fil}
+\setlength\@fpsep{8\p@ \@plus 2fil}
+\setlength\@fpbot{0\p@ \@plus 1fil}
+\setlength\@dblfptop{0\p@ \@plus 1fil}
+\setlength\@dblfpsep{8\p@ \@plus 2fil}
+\setlength\@dblfpbot{0\p@ \@plus 1fil}
+\setlength\partopsep{0\p@}
+\def\@listi{\leftmargin\leftmargini
+            \parsep 0\p@
+            \topsep 12\p@ \@plus2\p@ \@minus2\p@
+            \itemsep4\p@ \@plus2\p@ \@minus\p@}
+\let\@listI\@listi
+\@listi
+\def\@listii {\leftmargin\leftmarginii
+              \labelwidth\leftmarginii
+              \advance\labelwidth-\labelsep
+              \topsep    4\p@ \@plus2\p@ \@minus\p@
+              \parsep    2\p@ \@plus\p@  \@minus\p@
+              \itemsep   \parsep}
+\def\@listiii{\leftmargin\leftmarginiii
+              \labelwidth\leftmarginiii
+              \advance\labelwidth-\labelsep
+              \topsep    2\p@ \@plus\p@\@minus\p@
+              \parsep    \z@
+              \partopsep \p@ \@plus\z@ \@minus\p@
+              \itemsep   \topsep}
+\def\@listiv {\leftmargin\leftmarginiv
+              \labelwidth\leftmarginiv
+              \advance\labelwidth-\labelsep}
+\def\@listv  {\leftmargin\leftmarginv
+              \labelwidth\leftmarginv
+              \advance\labelwidth-\labelsep}
+\def\@listvi {\leftmargin\leftmarginvi
+              \labelwidth\leftmarginvi
+              \advance\labelwidth-\labelsep}
+\endinput
+%%
+%% End of file `size10.clo'.

@@ -1,0 +1,147 @@
+%%This is an article template for the
+%%pmet LaTeX Class Package for Psychometrika Authors (Version 1c1)
+\documentclass{pmet}
+
+\submit
+
+%%The following package gives commands for bold Greek characters.
+%%For example, \bfPsi, which results in an boldface uppercase Psi.
+\input{boldgreek}
+
+\usepackage[dvips]{graphicx}
+%\usepackage[pdftex]{graphicx}
+%\usepackage[draft]{graphicx}
+
+
+%\raggedbottom
+\flushbottom
+
+
+
+\setlength\topmargin{1.25cm}
+\setlength\evensidemargin{1.25cm}
+\setlength\oddsidemargin{1.25cm}
+\setlength\textwidth{15cm}
+\setlength\textheight{21cm}
+\renewcommand{\normalsize}{\fontsize{11}{16}\selectfont}
+\renewcommand{\footnotesize}{\fontsize{10}{12}\selectfont}
+\fontsize{11}{16}\selectfont
+
+%\usepackage{nohead}
+
+%\firstpage{1}
+%\setcounter{lastpage}{999}
+
+%%By default we do not number section headings,
+%%but authors are free to number their section headings if they wish.
+\setcounter{secnumdepth}{0}%% Unnumbered section headings.
+%\setcounter{secnumdepth}{3} %% Numbered section headings.
+
+\begin{document}
+
+\title{Your Title Goes Here}
+
+\maketitle
+
+%%When you submit your PDF file or manuscript,
+%%author names must be removed from all headers.
+%%So if you use the \markright or \markboth commands,
+%%and put your name in the header,
+%%they must be disabled prior to your submission.
+%%Before you can use either the \markright or \markboth
+%%commands, you must disable the "\submit" switch above.
+%\markright{}
+%\markboth{}{}
+
+\author{First Author}
+
+\affil{University Name}
+
+%\author{}
+
+%\affil{}
+
+
+\reprints{Correspondence should be sent to\\
+
+
+\noindent E-Mail: \\
+\noindent Phone:  \\
+\noindent Fax:  \\
+\noindent Website:  \\}
+
+
+\newpage\vspace*{24pt}
+
+\RepeatTitle{Your Title Goes Here Again}
+
+\begin{center}\vskip3pt
+
+
+\vspace{32pt}
+
+Abstract\vskip3pt
+
+\end{center}
+
+
+\begin{abstract}
+
+Your abstract goes here. It should be one paragraph,
+and not exceed 120 words.
+
+\begin{keywords}
+
+key, words, go, here.
+
+\end{keywords}
+\end{abstract}
+
+\vspace{\fill}\newpage
+
+\section{Introduction}
+
+Your paper begins here.
+
+\subsection{A Subsection Example}
+
+\subsubsection{A Subsubsection Example}
+
+
+\begin{thebibliography}
+
+\item Stout, William. (2002). Psychometrics: From practice to theory and back. \textit{Psychometrika}, \textit{67}, 485--518.
+
+\end{thebibliography}
+
+\bigskip
+
+\centerline{Figure Environments}
+
+\medskip
+
+%%This is an example of the "manfigure" environment,
+%%which allows you to manually place a figure pretty much anywhere you want it to go.
+\begin{manfigure}
+%\centerline{\includegraphics{figure01.eps}}
+\caption{Your caption goes here.}
+\end{manfigure}
+
+\figskip
+
+\begin{manfigure}
+%\centerline{\includegraphics{figure02.eps}}
+\caption{A three dimensional test with projections of item discrimination vectors onto $V_{\theta_T}$ hyperplane.}
+\end{manfigure}
+
+
+
+\begin{figure}[h]
+%\centerline{\includegraphics{figure03.eps}}
+\caption{Your caption goes here.}
+\end{figure}
+
+\vspace{\fill}
+
+%\vfill\eject
+\end{document}
