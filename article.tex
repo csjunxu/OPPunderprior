@@ -1,147 +1,149 @@
-%%This is an article template for the
-%%pmet LaTeX Class Package for Psychometrika Authors (Version 1c1)
-\documentclass{pmet}
+%%This article template was last updated 30 September 2003 --- Tim Null
+%%It is part of the
+%%Pmetrika LaTeX Style File Package for Psychometrika Authors
+%%This is the \LaTeX2e "article" template for the journal Psychometrika.
+%%It can be freely used and modified by anyone.
+%%
+%% ITEM 1 [See the "howto.tex" file.]
+%%
+\documentclass[titlepage,11pt]{article}
+%\documentclass[titlepage,a4paper,11pt]{article}
 
-\submit
-
-%%The following package gives commands for bold Greek characters.
-%%For example, \bfPsi, which results in an boldface uppercase Psi.
-\input{boldgreek}
-
+%%ITEM 2 [See the "howto.tex" file.]
 \usepackage[dvips]{graphicx}
+%\usepackage[draft,dvips]{graphicx}
 %\usepackage[pdftex]{graphicx}
-%\usepackage[draft]{graphicx}
+%\usepackage[draft,pdftex]{graphicx}
+
+%% ITEM 3 [See the "howto.tex" file.]
+\usepackage[myheadings]{fullpage}
+\usepackage{pmetrika}
+\usepackage{pmbib}
+
+\usepackage{submit}
+
+%% ITEM 4 [See the "howto.tex" file.]
+%\setcounter{secnumdepth}{3}
 
 
-%\raggedbottom
-\flushbottom
+%% ITEM 5 [See the "howto.tex" file.]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   ENTER YOUR PERSONAL PREAMBLE ITEMS IN THIS SECTION
+%%             Some examples provided
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Begin Section  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{}
+%\usepackage{}
+%input
+\def\diag{\mathrm{diag}}
+\def\vec{\mathrm{vec}}
+\def\cov{\mathrm{cov}}
+\def\tr{\mathrm{Tr}}
+\def\pr{\mathrm{Pr}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  End Section  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-\setlength\topmargin{1.25cm}
-\setlength\evensidemargin{1.25cm}
-\setlength\oddsidemargin{1.25cm}
-\setlength\textwidth{15cm}
-\setlength\textheight{21cm}
-\renewcommand{\normalsize}{\fontsize{11}{16}\selectfont}
-\renewcommand{\footnotesize}{\fontsize{10}{12}\selectfont}
-\fontsize{11}{16}\selectfont
-
-%\usepackage{nohead}
-
-%\firstpage{1}
-%\setcounter{lastpage}{999}
-
-%%By default we do not number section headings,
-%%but authors are free to number their section headings if they wish.
-\setcounter{secnumdepth}{0}%% Unnumbered section headings.
-%\setcounter{secnumdepth}{3} %% Numbered section headings.
 
 \begin{document}
 
-\title{Your Title Goes Here}
+%% ITEM 6 [See the "howto.tex" file.]
+\begin{titlepage}
 
-\maketitle
+\title{}
 
-%%When you submit your PDF file or manuscript,
-%%author names must be removed from all headers.
-%%So if you use the \markright or \markboth commands,
-%%and put your name in the header,
-%%they must be disabled prior to your submission.
-%%Before you can use either the \markright or \markboth
-%%commands, you must disable the "\submit" switch above.
-%\markright{}
-%\markboth{}{}
+%%Disable \markright for your submission,
+%%if it includes any author names.
+%%Note: The "submit" package includes a running header.
+%\markright{\MakeLowercase{\textsc{}}}
 
-\author{First Author}
+\author{}
 
-\affil{University Name}
+\affil{}
 
 %\author{}
-
 %\affil{}
 
+\vspace{\fill}\centerline{\today}\vspace{\fill}
 
-\reprints{Correspondence should be sent to\\
+%\comment{This research was funded by .}
+%\thanks{I would like to thank .}
+\linespacing{1}
+\contact{Correspondence should be sent to\\
 
+\noindent E-Mail: \break
+\noindent Phone: \break
+\noindent Fax: \break
+\noindent Website:  }
 
-\noindent E-Mail: \\
-\noindent Phone:  \\
-\noindent Fax:  \\
-\noindent Website:  \\}
+\end{titlepage}
 
+%% ITEM 7 [See the "howto.tex" file.]
+\setcounter{page}{2}
+\vspace*{2\baselineskip}
 
-\newpage\vspace*{24pt}
+\RepeatTitle{Your Title Goes Here Again}\vskip3pt
 
-\RepeatTitle{Your Title Goes Here Again}
-
-\begin{center}\vskip3pt
-
-
-\vspace{32pt}
-
-Abstract\vskip3pt
-
-\end{center}
-
-
+\linespacing{1.5}
+%% ITEM 8 [See the "howto.tex" file.]
+\abstracthead
 \begin{abstract}
 
-Your abstract goes here. It should be one paragraph,
-and not exceed 120 words.
 
 \begin{keywords}
 
-key, words, go, here.
-
 \end{keywords}
-\end{abstract}
+\end{abstract}\vspace{\fill}\pagebreak
 
-\vspace{\fill}\newpage
-
+%% ITEM 8 [See the "howto.tex" file.]
 \section{Introduction}
 
-Your paper begins here.
 
-\subsection{A Subsection Example}
+\vspace{\fill}\pagebreak
 
-\subsubsection{A Subsubsection Example}
+%% ITEM 9 [See the "howto.tex" file.]
+%\appendix
+%\renewcommand{\theequation}{A\arabic{equation}}
+%\setcounter{equation}{0}
+%\renewcommand{\thesection}{\Alph{subsection}}
+%\setcounter{section}{0}
+%\section*{Appendix}
+%\section*{Appendix A}
+%\section*{Appendix B}
+%\vspace{\fill}\pagebreak
 
-
+%% ITEM 10 [See the "howto.tex" file.]
 \begin{thebibliography}
 
-\item Stout, William. (2002). Psychometrics: From practice to theory and back. \textit{Psychometrika}, \textit{67}, 485--518.
+\bibitem
 
 \end{thebibliography}
 
-\bigskip
+%% ITEM 11 [See the "howto.tex" file.]
+%%%% You can put your Figures and Tables here
+%%%% after the Reference Section.
+%%%% BE SURE TO MARK IN THE TEXT WHERE
+%%%% YOU WANT EACH FIGURE AND TABLE TO BE PLACED.
+%%%% If you prefer, you can integrate your figures and tables into the text of your paper,
+%%%% PROVIDED you will provide camera-ready copies of each figure.
+%\vspace{\fill}\pagebreak
+%\linespacing{1}
 
-\centerline{Figure Environments}
-
-\medskip
-
-%%This is an example of the "manfigure" environment,
-%%which allows you to manually place a figure pretty much anywhere you want it to go.
-\begin{manfigure}
+%\section*{Figures}
+%
+%\begin{figure}[h]
 %\centerline{\includegraphics{figure01.eps}}
-\caption{Your caption goes here.}
-\end{manfigure}
-
-\figskip
-
-\begin{manfigure}
-%\centerline{\includegraphics{figure02.eps}}
-\caption{A three dimensional test with projections of item discrimination vectors onto $V_{\theta_T}$ hyperplane.}
-\end{manfigure}
+%\caption{Your figure caption goes here.}
+%\end{figure}
+%\vskip6pt
 
 
+%\vspace{\fill}\pagebreak
 
-\begin{figure}[h]
-%\centerline{\includegraphics{figure03.eps}}
-\caption{Your caption goes here.}
-\end{figure}
+%\section*{Tables}
 
-\vspace{\fill}
+%\vspace{\fill}\pagebreak
 
-%\vfill\eject
 \end{document}

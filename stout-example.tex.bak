@@ -2,6 +2,8 @@
 
 
 
+\input{boldgreek}
+
 \usepackage[dvips]{graphicx}
 
 \usepackage[myheadings]{fullpage}
