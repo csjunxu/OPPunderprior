@@ -8,6 +8,21 @@
 \usepackage{pmetrika}
 \usepackage{pmbib}
 
+
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{subfigure}
+\usepackage{upgreek}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{bm}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\usepackage{arydshln}
+\usepackage{cite}
+
 %\usepackage{submit}
 
 \newcommand{\bfU}{\mbox{\boldmath$\mathsf{U}$}}
@@ -34,7 +49,7 @@
 
 \author{Jun Xu }
 
-\markboth{Psychometrika}{William Stout}
+\markboth{Psychometrika}{ }
 
 \affil{Department of Computing, The Hong Kong Polytechnic University}
 
@@ -105,14 +120,48 @@ orthogonal Procrustes problem, pratially known priors
 \section{Introduction}
 
 \section{Definition of the Probelm and Solution}
-Results 1: The solution of
+Let $\mathbf{A},\mathbf{B}\in \mathcal{R}^{n\times m}$ be two given data matrices. Define $\mathbf{X}\in\mathcal{R}^{n\times p}$ and $\mathbf{P}\in\mathcal{R}^{n\times q}$ where $p+q=n$. $\mathbf{X}$ is the partially known prior which could be used to guide the solutions of $\mathbf{P}$. We formulate the orthogonal Procrustes problem with partially known priors as:
 \begin{equation}
-\begin{spilt}
-\mathbf{X}=\arg\min_{\mathbf{D}}\|\mathbf{B}-\mathbf{A}\mathbf{X}\|_{F}^{2}
+\mathbf{\hat{P}}=\arg\min_{\mathbf{D}}\|\mathbf{B}-[\mathbf{X}\ \mathbf{P}]\mathbf{A}\|_{F}^{2}
+\quad
+s.t.
+\quad
+\mathbf{P}^{\top}\mathbf{P} = \mathbf{I}_{q\times q}, \mathbf{X}^{\top}\mathbf{P} = \mathbf{0}_{p\times q}.
+\end{equation} 
+We crop the matrix $\mathbf{A}$ into two parts: $\mathbf{A}_{X}\in\mathcal{R}^{p\times m}$ and $\mathbf{A}_{P}\in\mathcal{R}^{q\times m}$ to interact with $\mathbf{X}$ and $\mathbf{P}$, respectively. Then we have 
+\begin{equation}
+\begin{split}
+&
+\|\mathbf{B}-[\mathbf{X}\ \mathbf{P}]\mathbf{A}\|_{F}^{2}
+=\|\mathbf{B}-[\mathbf{X}\ \mathbf{P}][\mathbf{A}_{X}^{\top}\ \mathbf{A}_{P}^{\top}]^{\top}\|_{F}^{2}
+=\|\mathbf{B}-[\mathbf{X}\ \mathbf{P}][\mathbf{A}_{X}^{\top}\ \mathbf{A}_{P}^{\top}]^{\top}\|_{F}^{2}
 \\
-subject to
-\end{{spilt}}
+&
+=\|\mathbf{B}-\mathbf{X}\mathbf{A}_{X}^{\top} - \mathbf{P}\mathbf{A}_{P}^{\top}]\|_{F}^{2}
+=\|\mathbf{B}-\mathbf{X}\mathbf{A}_{X}^{\top} - \mathbf{P}\mathbf{A}_{P}^{\top}]\|_{F}^{2}
+\end{split}
 \end{equation}
+The $\mathbf{B}-\mathbf{X}\mathbf{A}_{X}^{\top}$ is a known data matrix and we replace it with 
+$\mathbf{B}^{*}=\mathbf{B}-\mathbf{X}\mathbf{A}_{X}^{\top}$. In the following Results 1, we remove the notation $*$ and use $\mathbf{B}$ as the finally known data matrix.
+
+\textbf{Results 1}: The solution of
+\begin{equation}
+\mathbf{\hat{P}}=\arg\min_{\mathbf{D}}\|\mathbf{B}-\mathbf{P}\mathbf{A}\|_{F}^{2}
+\quad
+s.t.
+\quad
+\mathbf{P}^{\top}\mathbf{P} = \mathbf{I}_{q\times q}, \mathbf{X}^{\top}\mathbf{P} = \mathbf{0}_{p\times q} 
+\end{equation}
+is $\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}$ and $\mathbf{V}$ are the orthogonal matrices obtained by perfroming economy (aka. reduced) SVD:
+\begin{equation}
+(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top} = \mathbf{U}\mathbf{\Sigma}\mathbf{V}^{\top}
+\end{equation}
+
+\emph{proof}:
+
+In fact, as have been proofed, if the matrix $\mathbf{\mathbf{B}\mathbf{A}^{\top}}$ has no zero singular value, then the solution of  
+$\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$ is unique and we do not need any preceding results.
+
 
 
 \subsection{Unidimensionality from the Weak LI Conditional Covariance Perspective}
