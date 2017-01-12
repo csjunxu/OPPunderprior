@@ -41,7 +41,7 @@
 \setcounter{secnumdepth}{3}
 
 \begin{document}
-\begin{titlepage}
+
 
 \linespacing{1}
 
@@ -53,46 +53,6 @@
 
 \affil{Department of Computing, The Hong Kong Polytechnic University}
 
-\vspace{\fill}
-
-\begin{quote}
-\fontsize{8}{9}\selectfont \textit{}
-\end{quote}
-
-\vspace{\fill}
-
-\linespacing{1}\fontsize{8}{10}\selectfont
-
-\textit{This aricle is based on the Presidential Address William
-Stout gave on June 23, 2002 at the 67th Annual Meeting of the
-Psychometric Society held in Chapel Hill, North Carolina.
----Editor}\vskip2pt
-
-I wish to especially thank Sarah Hartz and Louis Roussos for their
-suggestions that helped shape this paper. I wish to thank all my
-former Ph.D. students: Without their contributions, the content of
-this paper would have been vastly different and much less
-interesting!\vskip2pt
-
-Requests for reprints should be sent to William Stout, Department
-of Statistics, University of Illinois, 725 S. Wright Street,
-Champaign IL 61820. E-Mail: stout@stat.uiuc.edu\vskip2pt
-
-\textsf{Dedication: I want to dedicate this paper to my wife,
-Barbara Meihoefer, who was lost to illness in this year of my
-presidency. For, in addition to all the wonderful things she meant
-to me personally and the enormous support she gave concerning my
-career, she truly enjoyed and greatly appreciated my psychometric
-colleagues and indeed found psychometrics an important and
-fascinating intellectual endeavor, in particular finding the
-skills diagnosis area exciting and important: She often took time
-from her career as a business manager and entrepreneur to attend
-psychometric meetings with me and to discuss research projects
-with my colleagues and me. She would have enjoyed this
-paper.---William Stout}
-
-
-\end{titlepage}\vspace*{24pt}
 
 \linespacing{1}
 
@@ -148,9 +108,9 @@ We crop the matrix $\mathbf{A}$ into two parts: $\mathbf{A}_{X}\in\mathcal{R}^{p
 The $\mathbf{B}-\mathbf{X}\mathbf{A}_{X}^{\top}$ is a known data matrix and we replace it with 
 $\mathbf{B}^{*}=\mathbf{B}-\mathbf{X}\mathbf{A}_{X}^{\top}$. In the following Results 1, we remove the notation $*$ and use $\mathbf{B}$ as the finally known data matrix.
 
-\textbf{Results 1}: Given partially known prior of $\mathbf{X}^{\top}\mathbf{X}=\mathbf{I}_{p\times p}$, the solution of the following problem
+\textbf{Results 1}: Let $\mathbf{A},\mathbf{B}\in \mathcal{R}^{n\times m}$ be two given data matrices, given partially known prior of $\mathbf{X}^{\top}\mathbf{X}=\mathbf{I}_{p\times p}$, the solution of the following problem
 \begin{equation}
-\mathbf{\hat{P}}=\arg\min_{\mathbf{D}}\|\mathbf{B}-\mathbf{P}\mathbf{A}\|_{F}^{2}
+\mathbf{\hat{P}}=\arg\min_{\mathbf{P}}\|\mathbf{B}-\mathbf{P}\mathbf{A}\|_{F}^{2}
 \quad
 s.t.
 \quad

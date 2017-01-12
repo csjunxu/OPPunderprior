@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  12 JAN 2017 16:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  12 JAN 2017 18:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -318,71 +318,77 @@ e
 \MPnumerator=\count128
 \makeMPintoPDFobject=\count129
 \everyMPtoPDFconversion=\toks22
-)
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 92.
- (c:/Software/texlive/2015/texmf-dist/tex/latex/psnfss/ot1phv.fd
-File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
-) [1
+) [1{c:/Software/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-{c:/Software/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 120.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 80.
 LaTeX Font Info:    Font shape `U/mp4/m/n' will be
-(Font)              scaled to size 10.95pt on input line 124.
+(Font)              scaled to size 10.95pt on input line 84.
 LaTeX Font Info:    Font shape `U/mp4/m/n' will be
-(Font)              scaled to size 8.0pt on input line 124.
+(Font)              scaled to size 8.0pt on input line 84.
 LaTeX Font Info:    Font shape `U/mp4/m/n' will be
-(Font)              scaled to size 6.0pt on input line 124.
+(Font)              scaled to size 6.0pt on input line 84.
 LaTeX Font Info:    Font shape `U/mp4sl/m/n' will be
-(Font)              scaled to size 10.95pt on input line 124.
+(Font)              scaled to size 10.95pt on input line 84.
 LaTeX Font Info:    Font shape `U/mp4sl/m/n' will be
-(Font)              scaled to size 8.0pt on input line 124.
+(Font)              scaled to size 8.0pt on input line 84.
 LaTeX Font Info:    Font shape `U/mp4sl/m/n' will be
-(Font)              scaled to size 6.0pt on input line 124.
-LaTeX Font Info:    Try loading font information for U+msa on input line 124.
+(Font)              scaled to size 6.0pt on input line 84.
+LaTeX Font Info:    Try loading font information for U+msa on input line 84.
 
 (c:/Software/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 124.
+LaTeX Font Info:    Try loading font information for U+msb on input line 84.
 
 (c:/Software/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `U/mp4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 182.
+(Font)              scaled to size 9.0pt on input line 142.
 LaTeX Font Info:    Font shape `U/mp4/m/n' will be
-(Font)              scaled to size 5.0pt on input line 182.
+(Font)              scaled to size 5.0pt on input line 142.
 LaTeX Font Info:    Font shape `U/mp4sl/m/n' will be
-(Font)              scaled to size 9.0pt on input line 182.
+(Font)              scaled to size 9.0pt on input line 142.
 LaTeX Font Info:    Font shape `U/mp4sl/m/n' will be
-(Font)              scaled to size 5.0pt on input line 182.
- [3]
+(Font)              scaled to size 5.0pt on input line 142.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 7486) has occurred while \output is active []
+
+ [2]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4] [5] [6
 
-] [7] [8]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 378.
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3] [4] [5
+
+] [6] [7]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 338.
 
 
 (c:/Software/texlive/2015/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 378.
- [9] [10]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 338.
+ [8] [9]
 (./OPP1.aux) ) 
 Here is how much of TeX's memory you used:
- 3516 strings out of 493091
- 45913 string characters out of 6134517
+ 3461 strings out of 493091
+ 45165 string characters out of 6134517
  106031 words of memory out of 5000000
- 6870 multiletter control sequences out of 15000+600000
- 42832 words of font info for 102 fonts, out of 8000000 for 9000
+ 6821 multiletter control sequences out of 15000+600000
+ 39388 words of font info for 98 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  38i,15n,26p,786b,235s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}
@@ -399,15 +405,14 @@ ware/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/Softwa
 re/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Softwa
 re/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/Softwar
 e/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/Software
-/texlive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Software/texli
-ve/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Software/texlive/2015/t
-exmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Software/texlive/2015/texmf-dist
-/fonts/type1/urw/times/utmr8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/ty
-pe1/urw/times/utmri8a.pfb>
-Output written on OPP1.pdf (10 pages, 193231 bytes).
+/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Software/texlive/
+2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Software/texlive/2015/texm
+f-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Software/texlive/2015/texmf-dist/fo
+nts/type1/urw/times/utmri8a.pfb>
+Output written on OPP1.pdf (9 pages, 184234 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
+ 103 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
