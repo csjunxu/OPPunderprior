@@ -78,7 +78,7 @@ orthogonal Procrustes problem, pratially known priors
 \vspace{\fill}\newpage
 
 \section{Introduction}
-The classical orthogonal Procrustes problem has been applied in factor analysis and statistics, machine learning, computer vision, optical imaging, and robotics.
+The classical orthogonal Procrustes problem has been applied in psychometrics, multidimensional scaling, factor analysis, machine learning, computer vision, optical imaging, and robotics.
 
 \section{Definition of the Probelm and Solution}
 Let $\mathbf{A},\mathbf{B}\in \mathcal{R}^{n\times m}$ be two given data matrices. Define $\mathbf{X}\in\mathcal{R}^{n\times p}$ and $\mathbf{P}\in\mathcal{R}^{n\times q}$ where $p+q=n$. $\mathbf{X}$ is the partially known prior which could be used to guide the solutions of $\mathbf{P}$. We formulate the orthogonal Procrustes problem with partially known priors as:
@@ -122,8 +122,9 @@ is $\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}$ and $\ma
 \end{equation}
 
 \emph{proof}: 
-
-
+\begin{equation}
+\mathbf{\hat{P}}=\arg\min_{\mathbf{P}}\|\mathbf{B}-\mathbf{P}\mathbf{A}\|_{F}^{2}
+\end{equation}
 
 
 \subsection{Unidimensionality from the Weak LI Conditional Covariance Perspective}
