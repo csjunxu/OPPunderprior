@@ -122,10 +122,37 @@ is $\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}$ and $\ma
 \end{equation}
 
 \emph{proof}: 
+Since $\mathbf{P}^{\top}\mathbf{P} = \mathbf{I}_{q\times q}$, we have
 \begin{equation}
-\mathbf{\hat{P}}=\arg\min_{\mathbf{P}}\|\mathbf{B}-\mathbf{P}\mathbf{A}\|_{F}^{2}
+\begin{split}
+\mathbf{\hat{P}}
+&
+=\arg\min_{\mathbf{P}}\|\mathbf{B}-\mathbf{P}\mathbf{A}\|_{F}^{2}
+=\arg\min_{\mathbf{P}}\|\mathbf{B}\|_{F}^{2}+\|\mathbf{P}\mathbf{A}\|_{F}^{2}-2\text{Tr}(\mathbf{B}^{\top}\mathbf{P}\mathbf{A})
+=\arg\max_{\mathbf{P}}\text{Tr}(\mathbf{A}\mathbf{B}^{\top}\mathbf{P}).
+\end{split}
 \end{equation}
-
+We can use Lagrange multiplier method and define the Lagrange function as:
+\begin{equation}
+\mathcal{L}
+=
+\text{Tr}(\mathbf{A}\mathbf{B}^{\top}\mathbf{P})
+-
+\text{Tr}(\Gamma_{1}(\mathbf{P}^{\top}\mathbf{P} - \mathbf{I}_{q\times q}))
+-
+\text{Tr}(\Gamma_{2}(\mathbf{P}^{\top}\mathbf{X}))
+,
+\end{equation}
+where $\Gamma$ is the augmented Lagrange multiplier. Take the derivative of $\mathcal{L}$ with respect to $\mathbf{P}$ and set it to 0, we can get
+\begin{equation}
+\frac{\partial \mathcal{L}}{\partial \mathbf{P}} 
+=
+\mathbf{B}\mathbf{A}^{\top}
+-
+\mathbf{P}(\Gamma_{1}+\Gamma_{1}^{\top})
+-
+\mathbf{X}\Gamma_{2}^{\top}
+\end{equation}
 
 \subsection{Unidimensionality from the Weak LI Conditional Covariance Perspective}
 

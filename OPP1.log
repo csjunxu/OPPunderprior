@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  13 JAN 2017 21:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  13 JAN 2017 22:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -346,20 +346,13 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 84.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `U/mp4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 143.
+(Font)              scaled to size 9.0pt on input line 170.
 LaTeX Font Info:    Font shape `U/mp4/m/n' will be
-(Font)              scaled to size 5.0pt on input line 143.
+(Font)              scaled to size 5.0pt on input line 170.
 LaTeX Font Info:    Font shape `U/mp4sl/m/n' will be
-(Font)              scaled to size 9.0pt on input line 143.
+(Font)              scaled to size 9.0pt on input line 170.
 LaTeX Font Info:    Font shape `U/mp4sl/m/n' will be
-(Font)              scaled to size 5.0pt on input line 143.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 4205) has occurred while \output is active []
-
+(Font)              scaled to size 5.0pt on input line 170.
  [2]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -373,24 +366,24 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [3] [4] [5
 
 ] [6] [7]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 339.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 366.
 
 
 (c:/Software/texlive/2015/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 339.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 366.
  [8] [9]
 (./OPP1.aux) ) 
 Here is how much of TeX's memory you used:
- 3461 strings out of 493091
- 45165 string characters out of 6134517
- 106031 words of memory out of 5000000
- 6821 multiletter control sequences out of 15000+600000
- 39388 words of font info for 98 fonts, out of 8000000 for 9000
+ 3462 strings out of 493091
+ 45178 string characters out of 6134517
+ 107031 words of memory out of 5000000
+ 6822 multiletter control sequences out of 15000+600000
+ 39895 words of font info for 99 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 38i,15n,26p,786b,235s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,17n,26p,786b,235s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}
 <c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
@@ -409,7 +402,7 @@ e/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/Software
 2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Software/texlive/2015/texm
 f-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Software/texlive/2015/texmf-dist/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on OPP1.pdf (9 pages, 184292 bytes).
+Output written on OPP1.pdf (9 pages, 186335 bytes).
 PDF statistics:
  103 PDF objects out of 1000 (max. 8388607)
  74 compressed objects within 1 object stream
