@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  14 JAN 2017 11:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  14 JAN 2017 13:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -344,18 +344,15 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 84.
 
 (c:/Software/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+) [2]
 LaTeX Font Info:    Font shape `U/mp4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 177.
+(Font)              scaled to size 9.0pt on input line 179.
 LaTeX Font Info:    Font shape `U/mp4/m/n' will be
-(Font)              scaled to size 5.0pt on input line 177.
+(Font)              scaled to size 5.0pt on input line 179.
 LaTeX Font Info:    Font shape `U/mp4sl/m/n' will be
-(Font)              scaled to size 9.0pt on input line 177.
+(Font)              scaled to size 9.0pt on input line 179.
 LaTeX Font Info:    Font shape `U/mp4sl/m/n' will be
-(Font)              scaled to size 5.0pt on input line 177.
- [2]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+(Font)              scaled to size 5.0pt on input line 179.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -363,18 +360,25 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3] [4] [5
 
-] [6] [7]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 373.
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 1142) has occurred while \output is active []
+
+ [3]
+[4] [5] [6
+
+] [7] [8]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 375.
 
 
 (c:/Software/texlive/2015/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 373.
- [8] [9]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 375.
+ [9] [10]
 (./OPP1.aux) ) 
 Here is how much of TeX's memory you used:
  3462 strings out of 493091
@@ -393,19 +397,20 @@ c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c
 /Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/
 Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/S
 oftware/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/So
-ftware/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Soft
-ware/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/Softwa
-re/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Softwa
-re/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/Softwar
-e/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/Software
-/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Software/texlive/
-2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Software/texlive/2015/texm
-f-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Software/texlive/2015/texmf-dist/fo
-nts/type1/urw/times/utmri8a.pfb>
-Output written on OPP1.pdf (9 pages, 186571 bytes).
+ftware/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/Soft
+ware/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Softwa
+re/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/Software
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Software
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/Software/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/Software/t
+exlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Software/texlive/20
+15/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Software/texlive/2015/texmf-
+dist/fonts/type1/urw/times/utmr8a.pfb><c:/Software/texlive/2015/texmf-dist/font
+s/type1/urw/times/utmri8a.pfb>
+Output written on OPP1.pdf (10 pages, 195437 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
+ 110 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
