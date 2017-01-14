@@ -243,7 +243,17 @@ Note that by cyclic perturbation which retains the trace unchanged and due to $\
 \end{split}
 \end{equation}
 Now we need to proof that $\text{Tr}(\Sigma)\ge\text{Tr}(\mathbf{B}^{\top}\mathbf{P}\mathbf{A})$ for every $\mathbf{P}$ satisfying that $\mathbf{P}^{\top}\mathbf{P} = \mathbf{I}_{q\times q}, \mathbf{X}^{\top}\mathbf{P} = \mathbf{0}_{p\times q}$. 
-Since $\text{Tr}(\mathbf{B}^{\top}\mathbf{P}\mathbf{A})\le$
+Since $\text{Tr}(\mathbf{B}^{\top}\mathbf{P}\mathbf{A})
+=
+\text{Tr}((\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}\mathbf{P}^{\top})
+=
+\text{Tr}(\mathbf{U}\Sigma\mathbf{V}^{\top}\mathbf{P}^{\top})
+=
+\text{Tr}(\Sigma\mathbf{V}^{\top}\mathbf{P}^{\top}\mathbf{U})
+\le
+\text{Tr}(\Sigma)?
+.
+$
 
 Since $\mathbf{P}$ is independent of $\text{Tr}(\Sigma)$, for which to be maximum, we need all the diagonal elements in $\Sigma$ to be nonnegative. Hence, once the $\mathbf{V}$ is given, the orientation of $\mathbf{U}$ must be chosen to retain the nonnegative diagonal elements in $\text{Tr}(\Sigma)$. 
 
