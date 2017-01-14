@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  15 JAN 2017 01:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  15 JAN 2017 01:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -371,11 +371,11 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
  [9] [10]
 (./OPP1.aux) ) 
 Here is how much of TeX's memory you used:
- 3466 strings out of 493091
- 45232 string characters out of 6134517
+ 3462 strings out of 493091
+ 45178 string characters out of 6134517
  108031 words of memory out of 5000000
- 6826 multiletter control sequences out of 15000+600000
- 40933 words of font info for 101 fonts, out of 8000000 for 9000
+ 6822 multiletter control sequences out of 15000+600000
+ 39895 words of font info for 99 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  38i,17n,26p,786b,235s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}
@@ -397,7 +397,7 @@ exlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Software/texlive/20
 15/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Software/texlive/2015/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb><c:/Software/texlive/2015/texmf-dist/font
 s/type1/urw/times/utmri8a.pfb>
-Output written on OPP1.pdf (10 pages, 199319 bytes).
+Output written on OPP1.pdf (10 pages, 199303 bytes).
 PDF statistics:
  110 PDF objects out of 1000 (max. 8388607)
  79 compressed objects within 1 object stream
