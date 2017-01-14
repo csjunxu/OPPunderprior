@@ -108,7 +108,7 @@ We crop the matrix $\mathbf{A}$ into two parts: $\mathbf{A}_{X}\in\mathcal{R}^{p
 The $\mathbf{B}-\mathbf{X}\mathbf{A}_{X}^{\top}$ is a known data matrix and we replace it with 
 $\mathbf{B}^{*}=\mathbf{B}-\mathbf{X}\mathbf{A}_{X}^{\top}$. In the following Results 1, we remove the notation $*$ and use $\mathbf{B}$ as the finally known data matrix.
 
-\textbf{Results 1}: Let $\mathbf{A},\mathbf{B}\in \mathcal{R}^{n\times m}$ be two given data matrices, given partially known prior of $\mathbf{X}^{\top}\mathbf{X}=\mathbf{I}_{p\times p}$. Then the sufficiency and necessary conditions of
+\textbf{Results 1}: Let $\mathbf{A}\in \mathcal{R}^{q\times m}$, $\mathbf{B}\in \mathcal{R}^{n\times m}$ be two given data matrices, given partially known prior of $\mathbf{X}^{\top}\mathbf{X}=\mathbf{I}_{p\times p}$. Then the sufficiency and necessary conditions of
 \begin{equation}
 \mathbf{\hat{P}}=\arg\min_{\mathbf{P}}\|\mathbf{B}-\mathbf{P}\mathbf{A}\|_{F}^{2}
 \quad
@@ -202,16 +202,16 @@ Since $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^
 =
 \mathbf{P}\mathbf{V}\Sigma\mathbf{U}^{\top}
 \end{equation}
-and hence we have $\mathbf{U}=\mathbf{P}\mathbf{V}$ and equivalently $\mathbf{P}=\mathbf{U}\mathbf{V}^{\top}$. Note that we can also employ the property of symmertric matrix that every symmertric matrix can be diagonalized to obtain this results. The necessary condition is proofed. 
+and hence we have $\mathbf{U}=\mathbf{P}\mathbf{V}$ and equivalently $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$. Note that we can also employ the property of symmertric matrix that every symmertric matrix can be diagonalized to obtain this results. The necessary condition is proofed. 
 
-Now we proof the sufficiency condition. If $\mathbf{P}=\mathbf{U}\mathbf{V}^{\top}$, then $\mathbf{P}$ satisfies that $\mathbf{P}^{\top}\mathbf{P}=\mathbf{I}_{q\times q}$ and $\mathbf{X}^{\top}\mathbf{P}=\mathbf{0}_{p\times q}$. The first is obvious and now we consider the second one. From the Equ. (4), since $\mathbf{X}^{\top}\mathbf{X}=\mathbf{I}_{p\times p}$, we have  
+Now we proof the sufficiency condition. If $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$, then $\mathbf{\hat{P}}$ satisfies that $\mathbf{\hat{P}}^{\top}\mathbf{\hat{P}}=\mathbf{I}_{q\times q}$ and $\mathbf{X}^{\top}\mathbf{\hat{P}}=\mathbf{0}_{p\times q}$. The first is obvious and now we consider the second one. From the Equ. (4), since $\mathbf{X}^{\top}\mathbf{X}=\mathbf{I}_{p\times p}$, we have  
 \begin{equation}
 \mathbf{X}^{\top}(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}=\mathbf{X}^{\top}\mathbf{B}\mathbf{A}^{\top}-\mathbf{X}^{\top}\mathbf{X}\mathbf{X}^{\top}\mathbf{B}\mathbf{A}^{\top}
 =
 \mathbf{0}_{p\times n}
 .
 \end{equation}
-It means that $\mathbf{X}^{\top}\mathbf{U}\Sigma\mathbf{V}^{\top}=\mathbf{0}_{p\times p}$ and hence $\mathbf{X}^{\top}\mathbf{U}=\mathbf{0}_{p\times p}$. Then $\mathbf{X}^{\top}\mathbf{P}=\mathbf{X}^{\top}\mathbf{U}\mathbf{V}^{\top}=\mathbf{0}_{p\times q}$.
+It means that $\mathbf{X}^{\top}\mathbf{U}\Sigma\mathbf{V}^{\top}=\mathbf{0}_{p\times p}$ and hence $\mathbf{X}^{\top}\mathbf{U}=\mathbf{0}_{p\times p}$. Then $\mathbf{X}^{\top}\mathbf{\hat{P}}=\mathbf{X}^{\top}\mathbf{U}\mathbf{V}^{\top}=\mathbf{0}_{p\times q}$.
 
 Besides, since
 \begin{equation}
@@ -221,7 +221,7 @@ Besides, since
 \end{split}
 \end{equation}
 Until now, if we want to proof that $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$ is the solution of problem (3), $\text{Tr}(\mathbf{B}^{\top}\mathbf{\hat{P}}\mathbf{A})$ has to be a maximum if $\|\mathbf{B}-\mathbf{\hat{P}}\mathbf{A}\|_{F}^{2}$ is to be a minimum, over all $\mathbf{P}$ satisfying the subject condition in Equ. (3).
-Note that by cyclic perturbation which retains the trace unchanged and due to $\mathbf{X}^{\top}\mathbf{P}=\mathbf{0}_{p\times q}$, we have 
+Note that by cyclic perturbation which retains the trace unchanged and due to $\mathbf{X}^{\top}\mathbf{\hat{P}}=\mathbf{0}_{p\times q}$, we have 
 \begin{equation}
 \begin{split}
 \text{Tr}(\mathbf{B}^{\top}\mathbf{\hat{P}}\mathbf{A})
@@ -242,6 +242,8 @@ Note that by cyclic perturbation which retains the trace unchanged and due to $\
 \text{Tr}(\Sigma).
 \end{split}
 \end{equation}
+Now we need to proof that $\text{Tr}(\Sigma)\ge\text{Tr}(\mathbf{B}^{\top}\mathbf{P}\mathbf{A})$ for every $\mathbf{P}$ satisfying that $\mathbf{P}^{\top}\mathbf{P} = \mathbf{I}_{q\times q}, \mathbf{X}^{\top}\mathbf{P} = \mathbf{0}_{p\times q}$.
+
 For $\text{Tr}(\mathbf{A}\mathbf{B}^{\top}\mathbf{P})$
 
 Note that if the partially known prior were not present, the solution is clearly the solution of the original orthogonal Procrustes problem, i.e., $\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}$ and $\mathbf{V}$ are the orthogonal matrices obtained by perfroming economy (aka. reduced) SVD:
