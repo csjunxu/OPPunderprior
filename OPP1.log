@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  14 JAN 2017 14:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  14 JAN 2017 20:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -346,34 +346,37 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 84.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [2]
 LaTeX Font Info:    Font shape `U/mp4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 190.
+(Font)              scaled to size 9.0pt on input line 220.
 LaTeX Font Info:    Font shape `U/mp4/m/n' will be
-(Font)              scaled to size 5.0pt on input line 190.
+(Font)              scaled to size 5.0pt on input line 220.
 LaTeX Font Info:    Font shape `U/mp4sl/m/n' will be
-(Font)              scaled to size 9.0pt on input line 190.
+(Font)              scaled to size 9.0pt on input line 220.
 LaTeX Font Info:    Font shape `U/mp4sl/m/n' will be
-(Font)              scaled to size 5.0pt on input line 190.
+(Font)              scaled to size 5.0pt on input line 220.
+ [3]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3] [4] [5
+[4] [5] [6
 
-] [6] [7]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 386.
+] [7] [8]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 416.
 
 
 (c:/Software/texlive/2015/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 386.
- [8] [9]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 416.
+ [9] [10]
 (./OPP1.aux) ) 
 Here is how much of TeX's memory you used:
  3462 strings out of 493091
  45178 string characters out of 6134517
- 108031 words of memory out of 5000000
+ 107031 words of memory out of 5000000
  6822 multiletter control sequences out of 15000+600000
  39895 words of font info for 99 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -397,10 +400,10 @@ exlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Software/texlive/20
 15/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Software/texlive/2015/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb><c:/Software/texlive/2015/texmf-dist/font
 s/type1/urw/times/utmri8a.pfb>
-Output written on OPP1.pdf (9 pages, 195676 bytes).
+Output written on OPP1.pdf (10 pages, 197042 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
+ 110 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

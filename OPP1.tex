@@ -163,7 +163,37 @@ After setting the equation (7) to zero, we get that
 =
 0.
 \end{equation}
-
+Since $\mathbf{P}^{\top}\mathbf{P}=\mathbf{I}_{q\times q}$ and $\mathbf{X}^{\top}\mathbf{P} = \mathbf{0}_{p\times q}$, by left multiplying the Equ. (8) by $\mathbf{X}^{\top}$, we have 
+\begin{equation}
+\mathbf{X}^{\top}\mathbf{B}\mathbf{A}^{\top}
+=
+\Gamma_{2}^{\top}.
+\end{equation}
+Put the results back to Equ. (8), we have 
+\begin{equation}
+\mathbf{B}\mathbf{A}^{\top}
+-
+\mathbf{P}(\Gamma_{1}+\Gamma_{1}^{\top})
+-
+\mathbf{X}\mathbf{X}^{\top}\mathbf{B}\mathbf{A}^{\top}
+=
+0.
+\end{equation}
+Or equivaliently, 
+\begin{equation}
+(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}
+=
+\mathbf{P}(\Gamma_{1}+\Gamma_{1}^{\top}).
+\end{equation}
+Right multiplying Equ. (11) by $\mathbf{P}^{\top}$, we have
+\begin{equation}
+(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}\mathbf{P}^{\top}
+=
+\mathbf{P}(\Gamma_{1}+\Gamma_{1}^{\top})\mathbf{P}^{\top}
+.
+\end{equation}
+This shows that $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}\mathbf{P}^{\top}$ is a symmertric matrix of order $n\times n$, and hence can be diagonalized. We perfrom economy (or reduced) singular value decomposition (SVD) on $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}$ by 
+$(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}=\mathbf{U}\Sigma\mathbf{V}^{\top}$
 
 
 Note that if the partially known prior were not present, the solution is clearly the solution of the original orthogonal Procrustes problem, i.e., $\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}$ and $\mathbf{V}$ are the orthogonal matrices obtained by perfroming economy (aka. reduced) SVD:
