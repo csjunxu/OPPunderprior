@@ -154,6 +154,13 @@ where $\Gamma$ is the augmented Lagrange multiplier. Take the derivative of $\ma
 \mathbf{X}\Gamma_{2}^{\top}
 \end{equation}
 
+
+Note that if the partially known prior were not present, the solution is clearly the solution of the original orthogonal Procrustes problem, i.e., $\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}$ and $\mathbf{V}$ are the orthogonal matrices obtained by perfroming economy (aka. reduced) SVD:
+$\mathbf{B}\mathbf{A}^{\top} = \mathbf{U}\mathbf{\Sigma}\mathbf{V}^{\top}$. 
+The difference between the solutions of the original orthogonal Procrustes problem and its partially known prior version quantify the effect on the residual of requiring $\mathbf{P}$ to be orgothonal to the external prior $\mathbf{P}^{\top}\mathbf{X}$.
+
+
+
 \subsection{Unidimensionality from the Weak LI Conditional Covariance Perspective}
 
 
