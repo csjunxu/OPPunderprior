@@ -153,6 +153,17 @@ where $\Gamma$ is the augmented Lagrange multiplier. Take the derivative of $\ma
 -
 \mathbf{X}\Gamma_{2}^{\top}
 \end{equation}
+After setting the equation (7) to zero, we get that
+\begin{equation}
+\mathbf{B}\mathbf{A}^{\top}
+-
+\mathbf{P}(\Gamma_{1}+\Gamma_{1}^{\top})
+-
+\mathbf{X}\Gamma_{2}^{\top}
+=
+0.
+\end{equation}
+
 
 
 Note that if the partially known prior were not present, the solution is clearly the solution of the original orthogonal Procrustes problem, i.e., $\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}$ and $\mathbf{V}$ are the orthogonal matrices obtained by perfroming economy (aka. reduced) SVD:
