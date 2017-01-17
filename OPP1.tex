@@ -81,7 +81,7 @@ orthogonal Procrustes problem, pratially known priors
 The classical orthogonal Procrustes problem has been applied in psychometrics, multidimensional scaling, factor analysis, machine learning, computer vision, optical imaging, and robotics.
 
 \section{Definition of the Probelm and Solution}
-Let $\mathbf{A},\mathbf{B}\in \mathbb{R}^{n\times m}$ be two given data matrices. Define $\mathbf{X}\in\mathbb{R}^{n\times p}$ and $\mathbf{P}\in\mathbb{R}^{n\times q}$ where $p+q=n$. $\mathbf{X}$ is the partially known prior which could be used to guide the solutions of $\mathbf{P}$. We formulate the orthogonal Procrustes problem with partially known priors as:
+Let $\mathbf{A},\mathbf{B}\in \mathbb{R}^{n\times m}$ be two given data matrices. Define $\mathbf{X}\in\mathbb{R}^{n\times p}$ and $\mathbf{P}\in\mathbb{R}^{n\times q}$ where $p+q=n$. For simplicity, we assume $n\ge m$ and the other cases can be analyzed in a similar way. $\mathbf{X}$ is the partially known prior which could be used to guide the solutions of $\mathbf{P}$. We formulate the orthogonal Procrustes problem with partially known priors as:
 \begin{equation}
 \mathbf{\hat{P}}=\arg\min_{\mathbf{D}}\|\mathbf{B}-[\mathbf{X}\ \mathbf{P}]\mathbf{A}\|_{F}^{2}
 \quad
@@ -253,8 +253,9 @@ $\mathbf{V}^{\top}\mathbf{P}^{\top}\mathbf{U}=\mathbf{I}_{q\times q}$, i.e., $\m
 Now we discuss the uniqueness of the solution $\mathbf{\hat{P}}$. In the SVD of $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}
 =
 \mathbf{U}\mathbf{\Sigma}\mathbf{V}^{\top}$, the singular vectors in $\mathbf{U}$ and $\mathbf{V}$
-can be determined up to orientation. The rank of the matrix $\mathbf{\Sigma}$ can be equal to or less than $q$.
+can be determined up to orientation. The rank of the matrix $\mathbf{\Sigma}$ largely depends on the matrices $\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top}$, $\mathbf{B}$ and $\mathbf{A}$. The rank of $\mathbf{B}$ and $\mathbf{A}$ are not larger than $m$ and $q$, respectively. can be equal to or less than $q$. 
 
+Non-degenerative case of rank($\mathbf{\Sigma}$): if $\mathbf{\Sigma}=q$, the 
 Hence, we can reformulate the SVD as 
 \begin{equation}
 (\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}
