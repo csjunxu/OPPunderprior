@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  17 JAN 2017 16:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  17 JAN 2017 16:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -341,11 +341,8 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 82.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{c:/Software/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-] [2]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-(./OPP1.bbl [3]) [4] (./OPP1.aux) ) 
+] [2] (./OPP1.bbl
+[3]) [4] (./OPP1.aux) ) 
 Here is how much of TeX's memory you used:
  3403 strings out of 493091
  44450 string characters out of 6134517
@@ -354,23 +351,23 @@ Here is how much of TeX's memory you used:
  30648 words of font info for 73 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  38i,17n,26p,786b,212s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/Software/texlive/2015/texmf-dist/fonts/e
-nc/dvips/base/8r.enc}<c:/Software/texlive/2015/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx8.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi6.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi8.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr6.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr8.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy8.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/sy
-mbols/msbm10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utm
-b8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
-c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Softwa
-re/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on OPP1.pdf (4 pages, 145693 bytes).
+{c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/bas
+e/8r.enc}<c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+bx10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+bx8.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i6.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+8.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
+.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.p
+fb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+<c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
+.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/
+Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Software/
+texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Software/texlive/2
+015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on OPP1.pdf (4 pages, 145493 bytes).
 PDF statistics:
  78 PDF objects out of 1000 (max. 8388607)
  56 compressed objects within 1 object stream

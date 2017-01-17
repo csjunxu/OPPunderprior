@@ -150,24 +150,16 @@ where $\Gamma$ is the augmented Lagrange multiplier. Take the derivative of $\ma
 \mathbf{P}(\Gamma_{1}+\Gamma_{1}^{\top})
 -
 \mathbf{X}\Gamma_{2}^{\top}
-\end{equation}
-After setting the equation (7) to zero, we get that
-\begin{equation}
-\mathbf{B}\mathbf{A}^{\top}
--
-\mathbf{P}(\Gamma_{1}+\Gamma_{1}^{\top})
--
-\mathbf{X}\Gamma_{2}^{\top}
 =
 0.
 \end{equation}
-Since $\mathbf{P}^{\top}\mathbf{P}=\mathbf{I}_{q\times q}$ and $\mathbf{X}^{\top}\mathbf{P} = \mathbf{0}_{p\times q}$, by left multiplying the Equ. (8) by $\mathbf{X}^{\top}$, we have 
+Since $\mathbf{P}^{\top}\mathbf{P}=\mathbf{I}_{q\times q}$ and $\mathbf{X}^{\top}\mathbf{P} = \mathbf{0}_{p\times q}$, by left multiplying the Equ. (7) by $\mathbf{X}^{\top}$, we have 
 \begin{equation}
 \mathbf{X}^{\top}\mathbf{B}\mathbf{A}^{\top}
 =
 \Gamma_{2}^{\top}.
 \end{equation}
-Put the results back to Equ. (8), we have 
+Put the results back to Equ. (7), we have 
 \begin{equation}
 \mathbf{B}\mathbf{A}^{\top}
 -
@@ -183,7 +175,7 @@ Or equivaliently,
 =
 \mathbf{P}(\Gamma_{1}+\Gamma_{1}^{\top}).
 \end{equation}
-Right multiplying Equ. (11) by $\mathbf{P}^{\top}$, we have
+Right multiplying Equ. (10) by $\mathbf{P}^{\top}$, we have
 \begin{equation}
 (\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}\mathbf{P}^{\top}
 =
@@ -252,14 +244,12 @@ Since $\text{Tr}(\mathbf{B}^{\top}\mathbf{P}\mathbf{A})
 \text{Tr}(\Sigma)
 .
 $
-The last inequality can be easily obtained by using the generalization \cite{TenBerge1983} of the Kristof's Theorem \cite{Kristof1970515}. The equality is obtained at 
+The last inequality can be easily obtained by using a generalization version \cite{TenBerge1983} of the Kristof's Theorem \cite{Kristof1970515}. The equality is obtained at 
 $\mathbf{V}^{\top}\mathbf{P}^{\top}\mathbf{U}=\mathbf{I}_{q\times q}$, i.e., $\mathbf{P}=\mathbf{U}\mathbf{V}^{\top}=\mathbf{\hat{P}}$. This completes the proof.
-
-(Since $\mathbf{P}$ is independent of $\text{Tr}(\Sigma)$, for which to be maximum, we need all the diagonal elements in $\Sigma$ to be nonnegative. Hence, once the $\mathbf{V}$ is given, the orientation of $\mathbf{U}$ must be chosen to retain the nonnegative diagonal elements in $\text{Tr}(\Sigma)$.)
 
 
 \section{Uniqueness of $\mathbf{\hat{P}}$}
-Now we discuss the uniqueness of the solution $\mathbf{P}$.
+Now we discuss the uniqueness of the solution $\mathbf{\hat{P}}$.
 
 For $\text{Tr}(\mathbf{A}\mathbf{B}^{\top}\mathbf{P})$
 
