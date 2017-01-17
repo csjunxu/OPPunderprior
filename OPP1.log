@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  17 JAN 2017 21:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  17 JAN 2017 21:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -361,6 +361,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{c:/Software/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ] [2] [3]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 (./OPP1.bbl [4]) [5] (./OPP1.aux) ) 
 Here is how much of TeX's memory you used:
  3467 strings out of 493091
@@ -388,7 +391,7 @@ ts/symbols/msbm10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/time
 s/utmb8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.
 pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/S
 oftware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on OPP1.pdf (5 pages, 167584 bytes).
+Output written on OPP1.pdf (5 pages, 168892 bytes).
 PDF statistics:
  89 PDF objects out of 1000 (max. 8388607)
  64 compressed objects within 1 object stream

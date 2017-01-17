@@ -285,7 +285,10 @@ Hence, we can define a diagonal matrix $\mathbf{D}=\mathbf{U}^{\top}\mathbf{P}\m
 \end{displaymath}
 Thus, we obtain that $\mathbf{P}=\mathbf{U}\mathbf{D}\mathbf{V}^{\top}$, where $\mathbf{D}$ is defined above. Hence, once we get the solution of $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$ in problem (3), the final solution for $\mathbf{P}$ when $\text{rank}(\mathbf{\Sigma})<q$ is not unique since the matrix $\mathbf{D}$ is not uniquely determined. In fact, since the number of $\mathbf{D}$ with different diagonal combinations is $2^{q-r}$, the number of solutions for $\mathbf{P}$ is $2^{q-r}$ given fixed $\mathbf{U}$ and $\mathbf{V}$.
 
-Since the solution of $\mathbf{\hat{P}}$ is not unique when $\text{rank}(\mathbf{\Sigma})$, we define the set of solutions for in a formal manner and discuss its properties.
+Since the solution of $\mathbf{\hat{P}}$ is not unique when $\text{rank}(\mathbf{\Sigma})<q$, we define the set of solutions for in a formal manner and discuss its properties. The solution set can be defined as:
+\begin{equation}
+\mathcal{S}=\{\mathbf{S}\in\mathbb{R}^{n\times q}: \mathbf{S}^{\top}\mathbf{S}=\mathbf{I}_{q\times q}, \|\mathbf{B}-\mathbf{S}\mathbf{A}\|_{F}^{2}=\min_{\mathbf{P}}\|\mathbf{B}-\mathbf{P}\mathbf{A}\|_{F}^{2}\}
+\end{equation}
 
 
 
