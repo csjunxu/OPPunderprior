@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{Berge2006}
+Jos M. F.~ten Berge.
+\newblock The rigid orthogonal procrustes rotation problem.
+\newblock {\em Psychometrika}, 71(1):201--205, 2006.
+
 \bibitem{TenBerge1983}
 Jos M.~F. Ten~Berge.
 \newblock A generalization of kristof's theorem on the trace of certain matrix

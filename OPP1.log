@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  17 JAN 2017 20:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  17 JAN 2017 20:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -363,10 +363,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ] [2] [3]
 (./OPP1.bbl) [4] (./OPP1.aux) ) 
 Here is how much of TeX's memory you used:
- 3449 strings out of 493091
- 45578 string characters out of 6134517
- 109976 words of memory out of 5000000
- 6824 multiletter control sequences out of 15000+600000
+ 3450 strings out of 493091
+ 45589 string characters out of 6134517
+ 109979 words of memory out of 5000000
+ 6825 multiletter control sequences out of 15000+600000
  30648 words of font info for 73 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  38i,17n,26p,1316b,210s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -387,7 +387,7 @@ ymbols/msbm10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/ut
 mb8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
 <c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Softw
 are/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on OPP1.pdf (4 pages, 157407 bytes).
+Output written on OPP1.pdf (4 pages, 157511 bytes).
 PDF statistics:
  82 PDF objects out of 1000 (max. 8388607)
  59 compressed objects within 1 object stream
