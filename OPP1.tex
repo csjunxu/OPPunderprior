@@ -250,21 +250,21 @@ The last inequality can be obtained by using a generalization version \cite{TenB
 $\mathbf{V}^{\top}\mathbf{P}^{\top}\mathbf{U}=\mathbf{I}_{q\times q}$, i.e., $\mathbf{P}=\mathbf{U}\mathbf{V}^{\top}=\mathbf{\hat{P}}$. This completes the proof.$\hfill\blacksquare$ 
 
 \section{Uniqueness of $\mathbf{\hat{P}}$}
-Now we discuss the uniqueness of the solution $\mathbf{\hat{P}}$. In the SVD of $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}
+
+Now we discuss the uniqueness of the solution $\mathbf{\hat{P}}$. Our discussion is according to the rankness of the $\mathbf{\Sigma}$ generated in the SVD. The rank of $\mathbf{\Sigma}$ largely depends on the rank of $\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top}$, $\mathbf{B}$ and $\mathbf{A}$. Note that the rank of $\mathbf{B}$ and $\mathbf{A}$ are not larger than $m$ and $q$, respectively. The rank of $\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top}$ is at least $n-q=p$ (since rank($\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top}$) $\ge$ $\text{rank}(\mathbf{I}_{n\times n}) - \text{rank}(\mathbf{X}\mathbf{X}^{\top})$ $\ge$ $n-p=q$). From above observations, we can see that the rank of $\mathbf{\Sigma}$ can be equal to or less than $q$. 
+
+If $\text{rank}(\mathbf{\Sigma})=q$ (we call this non-degenerative case), $\mathbf{\Sigma}$ may have distinct or multile non-zero singular values. In the SVD of $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}
 =
 \mathbf{U}\mathbf{\Sigma}\mathbf{V}^{\top}$, the singular vectors in $\mathbf{U}$ and $\mathbf{V}$
-can be determined up to orientation. The rank of the matrix $\mathbf{\Sigma}$ largely depends on the matrices $\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top}$, $\mathbf{B}$ and $\mathbf{A}$. The rank of $\mathbf{B}$ and $\mathbf{A}$ are not larger than $m$ and $q$, respectively. can be equal to or less than $q$. 
-
-Non-degenerative case of rank($\mathbf{\Sigma}$): if $\mathbf{\Sigma}=q$, the 
-Hence, we can reformulate the SVD as 
+can be determined up to orientation. Hence, we can reformulate the SVD as 
 \begin{equation}
 (\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}
 =
 \mathbf{U}^{*}\mathbf{K}_{u}\mathbf{\Sigma}\mathbf{K}_{v}(\mathbf{V}^{*})^{\top},
 \end{equation}
-where $\mathbf{U}^{*}\in \mathbb{R}^{n\times q}$ and $\mathbf{V}^{*}\in \mathbb{R}^{q\times q}$ are arbitrarily orientated singular vectors of $\mathbf{U}$ and $\mathbf{V}$, respectively. $\mathbf{\Sigma}\in \mathbb{R}^{q\times q}$ are diagonal matrix with singular values are arranged in weak descending order along the diagonal, i.e., $\mathbf{\Sigma}_{11}\ge\mathbf{\Sigma}_{22}\ge...\ge\mathbf{\Sigma}_{qq}\ge0$. The $\mathbf{K}_{u}$ and $\mathbf{K}_{v}$ are diagnonal matrices with $+1$ or $-1$ as diagonal elements in arbitrary distribution. If we fix $\mathbf{K}_{u}$, then $\mathbf{K}_{v}$ is uniquely determined to meet the requirement that the diagonal elements of $\mathbf{\Sigma}$ should be nonnegative. And the orientations of the singular vectors of $\mathbf{U}^{*}$ is fixed, then the $\mathbf{U}=\mathbf{U}^{*}\mathbf{K}_{u}$ is determined, so does the orientations of the singular vectors of $\mathbf{V}^{*}$ and $\mathbf{V}^{\top}=\mathbf{K}_{v}(\mathbf{V}^{*})^{\top}$. In this case, the solution of $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}=\mathbf{U}^{*}\mathbf{K}_{u}\mathbf{K}_{v}(\mathbf{V}^{*})^{\top}$ is unique.
+where $\mathbf{U}^{*}\in \mathbb{R}^{n\times q}$ and $\mathbf{V}^{*}\in \mathbb{R}^{q\times q}$ are arbitrarily orientated singular vectors of $\mathbf{U}$ and $\mathbf{V}$, respectively. $\mathbf{\Sigma}\in \mathbb{R}^{q\times q}$ are diagonal matrix with singular values are arranged in weak descending order along the diagonal, i.e., $\mathbf{\Sigma}_{11}\ge\mathbf{\Sigma}_{22}\ge...\ge\mathbf{\Sigma}_{qq}\ge0$. The $\mathbf{K}_{u}$ and $\mathbf{K}_{v}$ are diagnonal matrices with $+1$ or $-1$ as diagonal elements in arbitrary distribution. If we fix $\mathbf{K}_{u}$, then $\mathbf{K}_{v}$ is uniquely determined to meet the requirement that the diagonal elements of $\mathbf{\Sigma}$ should be nonnegative. And the orientations of the singular vectors of $\mathbf{U}^{*}$ is fixed, then the $\mathbf{U}=\mathbf{U}^{*}\mathbf{K}_{u}$ is determined, so does the orientations of the singular vectors of $\mathbf{V}^{*}$ and $\mathbf{V}^{\top}=\mathbf{K}_{v}(\mathbf{V}^{*})^{\top}$. In this case, the solution of $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}=\mathbf{U}^{*}\mathbf{K}_{u}\mathbf{K}_{v}(\mathbf{V}^{*})^{\top}$ is unique. The case that the $\mathbf{\Sigma}$ have multiple singular values also has unique solution of $\mathbf{\hat{P}}$, which can be discussed in a similar way. 
 
-For $\text{Tr}(\mathbf{A}\mathbf{B}^{\top}\mathbf{P})$
+If $\text{rank}(\mathbf{\Sigma})=q$ (we call this degenerative case), the solution of $\mathbf{\Sigma}$ is not unique.
 
 Note that if the partially known prior were not present, the solution is clearly the solution of the original orthogonal Procrustes problem, i.e., $\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}$ and $\mathbf{V}$ are the orthogonal matrices obtained by perfroming economy (a.k.a. reduced) SVD:
 $\mathbf{B}\mathbf{A}^{\top} = \mathbf{U}\mathbf{\mathbf{\Sigma}}\mathbf{V}^{\top}$. 
