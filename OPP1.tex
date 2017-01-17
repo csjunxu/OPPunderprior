@@ -1,9 +1,6 @@
 \documentclass[titlepage,11pt,twoside]{article}
 
 
-
-\usepackage[dvips]{graphicx}
-
 \usepackage[myheadings]{fullpage}
 \usepackage{pmetrika}
 %\usepackage{pmbib}
@@ -22,6 +19,11 @@
 \DeclareMathOperator*{\argmin}{arg\,min}
 \usepackage{arydshln}
 \usepackage{cite}
+
+% to make the words are in a line on column
+\usepackage{ragged2e}
+\justifying
+
 
 %\usepackage{submit}
 
@@ -249,7 +251,16 @@ $\mathbf{V}^{\top}\mathbf{P}^{\top}\mathbf{U}=\mathbf{I}_{q\times q}$, i.e., $\m
 
 
 \section{Uniqueness of $\mathbf{\hat{P}}$}
-Now we discuss the uniqueness of the solution $\mathbf{\hat{P}}$.
+Now we discuss the uniqueness of the solution $\mathbf{\hat{P}}$. In the SVD of $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}
+=
+\mathbf{U}\Sigma\mathbf{V}^{\top}$, the singular vectors in $\mathbf{U}$ and $\mathbf{V}$
+can be determined up to orientation. Hence, we can reformulate the SVD as 
+\begin{equation}
+(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}
+=
+\mathbf{U}^{*}\mathbf{K}_{U}\Sigma\mathbf{K}_{V}(\mathbf{V}^{*})^{\top},
+\end{equation}
+where $\mathbf{U}^{*}\in \mathbb{R}^{n\times q}$ and $\mathbf{V}^{*}\in \mathbb{R}^{q\times q}$ are arbitrarily orientated singular vectors of $\mathbf{U}$ and $\mathbf{V}$, respectively. $\Sigma\in \mathbb{R}^{q\times q}$,
 
 For $\text{Tr}(\mathbf{A}\mathbf{B}^{\top}\mathbf{P})$
 
