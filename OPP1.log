@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  17 JAN 2017 20:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  17 JAN 2017 21:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -361,36 +361,37 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{c:/Software/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ] [2] [3]
-(./OPP1.bbl) [4] (./OPP1.aux) ) 
+(./OPP1.bbl [4]) [5] (./OPP1.aux) ) 
 Here is how much of TeX's memory you used:
- 3450 strings out of 493091
- 45589 string characters out of 6134517
+ 3467 strings out of 493091
+ 45750 string characters out of 6134517
  109979 words of memory out of 5000000
- 6825 multiletter control sequences out of 15000+600000
- 30648 words of font info for 73 fonts, out of 8000000 for 9000
+ 6835 multiletter control sequences out of 15000+600000
+ 33438 words of font info for 83 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 38i,17n,26p,1316b,210s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/Software/texlive/2015/texmf-dist/fonts/enc/d
-vips/base/8r.enc}<c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmbx10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmbx8.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi6.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi8.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr6.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr8.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy8.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbol
-s/msam10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/s
-ymbols/msbm10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/ut
-mb8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-<c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Softw
-are/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on OPP1.pdf (4 pages, 157511 bytes).
+ 38i,17n,26p,1316b,215s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/Software/texlive/2015/texmf-dist/fonts/e
+nc/dvips/base/8r.enc}<c:/Software/texlive/2015/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbx10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbx8.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmex10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi6.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi8.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr6.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr8.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy8.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/sy
+mbols/msam10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/amsfon
+ts/symbols/msbm10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/time
+s/utmb8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.
+pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/S
+oftware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on OPP1.pdf (5 pages, 167584 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
+ 89 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
