@@ -81,7 +81,7 @@ orthogonal Procrustes problem, pratially known priors
 The classical orthogonal Procrustes problem has been applied in psychometrics, multidimensional scaling, factor analysis, machine learning, computer vision, optical imaging, and robotics.
 
 \section{Definition of the Probelm and Solution}
-Let $\mathbf{A},\mathbf{B}\in \mathcal{R}^{n\times m}$ be two given data matrices. Define $\mathbf{X}\in\mathcal{R}^{n\times p}$ and $\mathbf{P}\in\mathcal{R}^{n\times q}$ where $p+q=n$. $\mathbf{X}$ is the partially known prior which could be used to guide the solutions of $\mathbf{P}$. We formulate the orthogonal Procrustes problem with partially known priors as:
+Let $\mathbf{A},\mathbf{B}\in \mathbb{R}^{n\times m}$ be two given data matrices. Define $\mathbf{X}\in\mathbb{R}^{n\times p}$ and $\mathbf{P}\in\mathbb{R}^{n\times q}$ where $p+q=n$. $\mathbf{X}$ is the partially known prior which could be used to guide the solutions of $\mathbf{P}$. We formulate the orthogonal Procrustes problem with partially known priors as:
 \begin{equation}
 \mathbf{\hat{P}}=\arg\min_{\mathbf{D}}\|\mathbf{B}-[\mathbf{X}\ \mathbf{P}]\mathbf{A}\|_{F}^{2}
 \quad
@@ -92,7 +92,7 @@ s.t.
 In fact, as have been proofed, if the matrix $\mathbf{\mathbf{B}\mathbf{A}^{\top}}$ has no zero singular value, then the solution of  
 $\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$ is unique and we do not need any preceding results.
 
-We crop the matrix $\mathbf{A}$ into two parts: $\mathbf{A}_{X}\in\mathcal{R}^{p\times m}$ and $\mathbf{A}_{P}\in\mathcal{R}^{q\times m}$ to interact with $\mathbf{X}$ and $\mathbf{P}$, respectively. Then we have 
+We crop the matrix $\mathbf{A}$ into two parts: $\mathbf{A}_{X}\in\mathbb{R}^{p\times m}$ and $\mathbf{A}_{P}\in\mathbb{R}^{q\times m}$ to interact with $\mathbf{X}$ and $\mathbf{P}$, respectively. Then we have 
 \begin{equation}
 \begin{split}
 &
@@ -108,7 +108,7 @@ We crop the matrix $\mathbf{A}$ into two parts: $\mathbf{A}_{X}\in\mathcal{R}^{p
 The $\mathbf{B}-\mathbf{X}\mathbf{A}_{X}^{\top}$ is a known data matrix and we replace it with 
 $\mathbf{B}^{*}=\mathbf{B}-\mathbf{X}\mathbf{A}_{X}^{\top}$. In the following Results 1, we remove the notation $*$ and use $\mathbf{B}$ as the finally known data matrix.
 
-\textbf{Results 1}: Let $\mathbf{A}\in \mathcal{R}^{q\times m}$, $\mathbf{B}\in \mathcal{R}^{n\times m}$ be two given data matrices, given partially known prior of $\mathbf{X}^{\top}\mathbf{X}=\mathbf{I}_{p\times p}$. Then the sufficiency and necessary conditions of
+\textbf{Results 1}: Let $\mathbf{A}\in \mathbb{R}^{q\times m}$, $\mathbf{B}\in \mathbb{R}^{n\times m}$ be two given data matrices, given partially known prior of $\mathbf{X}^{\top}\mathbf{X}=\mathbf{I}_{p\times p}$. Then the sufficiency and necessary conditions of
 \begin{equation}
 \mathbf{\hat{P}}=\arg\min_{\mathbf{P}}\|\mathbf{B}-\mathbf{P}\mathbf{A}\|_{F}^{2}
 \quad
@@ -116,7 +116,7 @@ s.t.
 \quad
 \mathbf{P}^{\top}\mathbf{P} = \mathbf{I}_{q\times q}, \mathbf{X}^{\top}\mathbf{P} = \mathbf{0}_{p\times q} 
 \end{equation}
-is $\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}$ and $\mathbf{V}$ are the orthogonal matrices obtained by perfroming economy (aka. reduced) SVD:
+is $\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}\in \mathbb{R}^{n\times q}$ and $\mathbf{V}\in \mathbb{R}^{q\times q}$ are the orthogonal matrices obtained by perfroming economy (aka. reduced) SVD:
 \begin{equation}
 (\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top} = \mathbf{U}\mathbf{\Sigma}\mathbf{V}^{\top}
 \end{equation}
