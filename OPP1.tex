@@ -249,6 +249,11 @@ $
 The last inequality can be obtained by using a generalization version \cite{TenBerge1983} of the Kristof's Theorem \cite{Kristof1970515}. The equality is obtained at 
 $\mathbf{V}^{\top}\mathbf{P}^{\top}\mathbf{U}=\mathbf{I}_{q\times q}$, i.e., $\mathbf{P}=\mathbf{U}\mathbf{V}^{\top}=\mathbf{\hat{P}}$. This completes the proof.$\hfill\blacksquare$ 
 
+Note that if the partially known prior were not present, the solution is clearly the solution of the original orthogonal Procrustes problem, i.e., $\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}$ and $\mathbf{V}$ are the orthogonal matrices obtained by perfroming economy (a.k.a. reduced) SVD:
+$\mathbf{B}\mathbf{A}^{\top} = \mathbf{U}\mathbf{\mathbf{\Sigma}}\mathbf{V}^{\top}$. 
+The difference between the solutions of the original orthogonal Procrustes problem and its partially known prior version quantify the effect on the residual of requiring $\mathbf{P}$ to be orgothonal to the external prior $\mathbf{P}^{\top}\mathbf{X}$.
+
+
 \section{Uniqueness and Solution Set of $\mathbf{\hat{P}}$}
 
 Now we discuss the uniqueness of the solution $\mathbf{\hat{P}}$. Our discussion is according to the rankness of the $\mathbf{\Sigma}$ generated in the SVD. The rank of $\mathbf{\Sigma}$ largely depends on the rank of $\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top}$, $\mathbf{B}$ and $\mathbf{A}$. Note that the rank of $\mathbf{B}$ and $\mathbf{A}$ are not larger than $m$ and $q$, respectively. The rank of $\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top}$ is at least $n-q=p$ (since rank($\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top}$) $\ge$ $\text{rank}(\mathbf{I}_{n\times n}) - \text{rank}(\mathbf{X}\mathbf{X}^{\top})$ $\ge$ $n-p=q$). From above observations, we can see that the rank of $\mathbf{\Sigma}$ can be equal to or less than $q$. 
@@ -287,15 +292,8 @@ Thus, we obtain that $\mathbf{P}=\mathbf{U}\mathbf{D}\mathbf{V}^{\top}$, where $
 
 Since the solution of $\mathbf{\hat{P}}$ is not unique when $\text{rank}(\mathbf{\Sigma})<q$, we define the set of solutions for in a formal manner and discuss its properties. The solution set can be defined as:
 \begin{equation}
-\mathcal{S}=\{\mathbf{S}\in\mathbb{R}^{n\times q}: \mathbf{S}^{\top}\mathbf{S}=\mathbf{I}_{q\times q}, \|\mathbf{B}-\mathbf{S}\mathbf{A}\|_{F}^{2}=\min_{\mathbf{P}}\|\mathbf{B}-\mathbf{P}\mathbf{A}\|_{F}^{2}\}
+\mathcal{S}=\{\mathbf{S}\in\mathbb{R}^{n\times q}: \mathbf{S}^{\top}\mathbf{S}=\mathbf{I}_{q\times q}, \mathbf{X}^{\top}\mathbf{S}=\mathbf{0}_{p\times q}, \|\mathbf{B}-\mathbf{S}\mathbf{A}\|_{F}^{2}=\min_{\mathbf{P}}\|\mathbf{B}-\mathbf{P}\mathbf{A}\|_{F}^{2}\}
 \end{equation}
-
-
-
-Note that if the partially known prior were not present, the solution is clearly the solution of the original orthogonal Procrustes problem, i.e., $\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}$ and $\mathbf{V}$ are the orthogonal matrices obtained by perfroming economy (a.k.a. reduced) SVD:
-$\mathbf{B}\mathbf{A}^{\top} = \mathbf{U}\mathbf{\mathbf{\Sigma}}\mathbf{V}^{\top}$. 
-The difference between the solutions of the original orthogonal Procrustes problem and its partially known prior version quantify the effect on the residual of requiring $\mathbf{P}$ to be orgothonal to the external prior $\mathbf{P}^{\top}\mathbf{X}$.
-
 
 \section{Sensitivity of $\mathbf{\hat{P}}$ to Data Perturbations}
 
