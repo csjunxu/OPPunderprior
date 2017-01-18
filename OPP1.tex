@@ -47,7 +47,7 @@
 
 \linespacing{1}
 
-\title{Solutions of Orthogonal Procrustes Problems under Partially Known  Prior}
+\title{Solutions of Orthogonal Procrustes Problems under Partially Known Guidance}
 
 \author{Jun Xu }
 
@@ -89,9 +89,9 @@ Let $\mathbf{A},\mathbf{B}\in\mathbb{R}^{n\times m}$ be two given matrices from 
 where ``$\top$'' means transpose operation. The solution of the transformation matrix $\mathbf{T}$ for problem (\ref{e1}) is
 $\mathbf{\hat{T}}=\mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}$ and $\mathbf{V}$ are obtained by performing singular value decomposition (SVD) on $\mathbf{B}\mathbf{A}^{\top}$ via $\mathbf{B}\mathbf{A}^{\top}=\mathbf{U}\mathbf{\Sigma}\mathbf{V}^{\top}$.
 
-Green \cite{green1952orthogonal} derived the solution of probelm (\ref{e1}) when the matrices $\mathbf{A}$ and $\mathbf{B}$ are of full column rank. Sch{\"o}nemann \cite{schonemann1966generalized} generalized the solution to matrices $\mathbf{A}$ and $\mathbf{B}$ of arbitrary rank and further studied the two-sided orthogonal Procrustes problems \cite{schonemann1968two}. Higham \cite{higham1988symmetric} studied the symmetric Procrustes problem by replacing the orthogonal restriction on $\mathbf{T}$ with symmetric $\mathbf{T}^{\top}=\mathbf{T}$.
+Green \cite{green1952orthogonal} derived the solution of probelm (\ref{e1}) when the matrices $\mathbf{A}$ and $\mathbf{B}$ are of full column rank. Sch{\"o}nemann \cite{schonemann1966generalized} generalized the solution to matrices $\mathbf{A}$ and $\mathbf{B}$ of arbitrary rank and further studied the two-sided orthogonal Procrustes problems \cite{schonemann1968two}. Higham \cite{higham1988symmetric} studied the symmetric Procrustes problem by replacing the orthogonal restriction on $\mathbf{T}$ with symmetric $\mathbf{T}^{\top}=\mathbf{T}$. Later, Watson \emph{et al.} studied the solutions of orthogonal Procrustes problems under general matrix norms such as orthogonally invariant norms \cite{Watson1994} and the special $\ell_{1}$ norm \cite{trendafilov2004l1}. The solutions for the generalized problems are not in closed-form and need projected gradient methods \cite{chu1990projected} or the famous Newton's method. In \cite{trendafilov2004l1}, the more general weighted orthogonal Procrustes problem is also solved by projected gradient methods \cite{chu1990projected}. Recently, Berge \cite{Berge2006} further discussed the rigid rotation problem which requires the determinant of $\mathbf{T}$ is 1 (i.e., eliminating the possibility of reflection). Recently, Viklands studied the weighted orthogonal Procrustes problem in his/her PhD thesis and local and global solutions are presented therein.  
 
-This is the classical orthogonal Procrustes problem \cite{procrustesprogram} which has been applied in psychometrics, multidimensional scaling, factor analysis, rigid rotation \cite{Berge2006}, machine learning, computer vision, optical imaging, and robotics.
+The classical orthogonal Procrustes problem \cite{procrustesprogram} has many applications including psychometrics, multidimensional scaling, factor analysis, rigid rotation \cite{Berge2006}, machine learning, computer vision, optical imaging, and robotics. In this paper, we study the solution of the orthogonal Procrustes problem when partial columns of the orthogonal transformatio matrix are known. This is possible and arised in the machine learning models in which the external date is employed to guide the learning of the internal data, which makes the dictionary more adaptive to the data being processed.
 
 \section{Definition of the Problem and Solution}
 Let $\mathbf{A},\mathbf{B}\in \mathbb{R}^{n\times m}$ be two given data matrices. Define $\mathbf{X}\in\mathbb{R}^{n\times p}$ and $\mathbf{P}\in\mathbb{R}^{n\times q}$ where $p+q=n$. For simplicity, we assume $n\ge m$ and the other cases can be analyzed in a similar way. $\mathbf{X}$ is the partially known prior which could be used to guide the solutions of $\mathbf{P}$. We formulate the orthogonal Procrustes problem with partially known priors as:
@@ -267,7 +267,7 @@ $\mathbf{B}\mathbf{A}^{\top} = \mathbf{U}\mathbf{\mathbf{\Sigma}}\mathbf{V}^{\to
 The difference between the solutions of the original orthogonal Procrustes problem and its partially known prior version quantify the effect on the residual of requiring $\mathbf{P}$ to be orgothonal to the external prior $\mathbf{P}^{\top}\mathbf{X}$.
 
 
-\section{Uniqueness and Solution Set of $\mathbf{\hat{P}}$}
+\section{Uniqueness of Solution $\mathbf{\hat{P}}$}
 
 Now we discuss the uniqueness of the solution $\mathbf{\hat{P}}$. Our discussion is according to the rankness of the $\mathbf{\Sigma}$ generated in the SVD. We first give a lemma describing the rank of $\mathbf{X}\mathbf{X}^{\top}$ where $\mathbf{X}\in\mathbb{R}^{n\times p}$ is the partially known orthogonal matrix. 
 
@@ -278,7 +278,7 @@ $\hfill\blacksquare$
 
 The rank of $\mathbf{\Sigma}$ largely depends on the rank of $\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top}$, $\mathbf{B}$ and $\mathbf{A}$. Note that the rank of $\mathbf{B}$ and $\mathbf{A}$ are not larger than $m$ and $q$, respectively. The rank of $\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top}$ is at least $n-q=p$ (since rank($\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top}$) $\ge$ $\text{rank}(\mathbf{I}_{n\times n}) - \text{rank}(\mathbf{X}\mathbf{X}^{\top})$ $\ge$ $n-p=q$). From above observations, we can see that the rank of $\mathbf{\Sigma}$ can be equal to or less than $q$. 
 
-If $\text{rank}(\mathbf{\Sigma})=q$ (we call this non-degenerative case), $\mathbf{\Sigma}$ may have distinct or multile non-zero singular values. In the SVD of $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}
+\textbf{Results 2}: If $\text{rank}(\mathbf{\Sigma})=q$ (we call this non-degenerative case), $\mathbf{\Sigma}$ may have distinct or multile non-zero singular values. In the SVD of $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}
 =
 \mathbf{U}\mathbf{\Sigma}\mathbf{V}^{\top}$, the singular vectors in $\mathbf{U}$ and $\mathbf{V}$
 can be determined up to orientation. Hence, we can reformulate the SVD as 
@@ -310,24 +310,20 @@ Hence, we can define a diagonal matrix $\mathbf{D}=\mathbf{U}^{\top}\mathbf{P}\m
 \end{displaymath}
 Thus, we obtain that $\mathbf{P}=\mathbf{U}\mathbf{D}\mathbf{V}^{\top}$, where $\mathbf{D}$ is defined above. Hence, once we get the solution of $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$ in problem (3), the final solution for $\mathbf{P}$ when $\text{rank}(\mathbf{\Sigma})<q$ is not unique since the matrix $\mathbf{D}$ is not uniquely determined. In fact, since the number of $\mathbf{D}$ with different diagonal combinations is $2^{q-r}$, the number of solutions for $\mathbf{P}$ is $2^{q-r}$ given fixed $\mathbf{U}$ and $\mathbf{V}$.
 
-Since the solution of $\mathbf{\hat{P}}$ is not unique when $\text{rank}(\mathbf{\Sigma})<q$, we define the set of solutions for in a formal manner and discuss its properties. The solution set can be defined as:
-\begin{equation}
-\mathcal{S}=\{\mathbf{S}\in\mathbb{R}^{n\times q}: \mathbf{S}^{\top}\mathbf{S}=\mathbf{I}_{q\times q}, \mathbf{X}^{\top}\mathbf{S}=\mathbf{0}_{p\times q}, \|\mathbf{B}-\mathbf{S}\mathbf{A}\|_{F}^{2}=\min_{\mathbf{P}}\|\mathbf{B}-\mathbf{P}\mathbf{A}\|_{F}^{2}\}
-\end{equation}
+%Since the solution of $\mathbf{\hat{P}}$ is not unique when $\text{rank}(\mathbf{\Sigma})<q$, we define the set of solutions for in a formal manner and discuss its properties. The solution set can be defined as:
+%\begin{equation}
+%\mathcal{S}=\{\mathbf{S}\in\mathbb{R}^{n\times q}: \mathbf{S}^{\top}\mathbf{S}=\mathbf{I}_{q\times q}, \mathbf{X}^{\top}\mathbf{S}=\mathbf{0}_{p\times q}, \|\mathbf{B}-\mathbf{S}\mathbf{A}\|_{F}^{2}=\min_{\mathbf{P}}\|\mathbf{B}-\mathbf{P}\mathbf{A}\|_{F}^{2}\}
+%\end{equation}
 
-\section{Sensitivity of $\mathbf{\hat{P}}$ to Data Perturbations}
+%\section{Sensitivity of $\mathbf{\hat{P}}$ to Data Perturbations}
 
-In this section, we examine the sensitivity of the solution to perturbation in the data. To measure this sensitivity, we give the relative residuals and the Fro-norm condition numbers of the solutions. The condition number of the matrix $\mathbf{A}$ is defined as $k_{F}(\mathbf{A})=\frac{\sigma_{1}}{\sigma_{r}}$, where $r=\text{rank}(\mathbf{A})$. 
-
-
+%In this section, we examine the sensitivity of the solution to perturbation in the data. To measure this sensitivity, we give the relative residuals and the Fro-norm condition numbers of the solutions. The condition number of the matrix $\mathbf{A}$ is defined as $k_{F}(\mathbf{A})=\frac{\sigma_{1}}{\sigma_{r}}$, where $r=\text{rank}(\mathbf{A})$. 
 
 
-
-
-\begin{figure}[h]
+%\begin{figure}[h]
 %\centerline{\includegraphics[width=254pt]{/figure07.eps}}
-\caption{North Carolina End-of-Grade Math Skills Test Subscores.}
-\end{figure}
+%\caption{North Carolina End-of-Grade Math Skills Test Subscores.}
+%\end{figure}
 
 
 

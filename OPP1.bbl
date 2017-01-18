@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{procrustesprogram}
 John~R. Hurley and Raymond~B. Cattell.
@@ -26,6 +26,23 @@ Peter~H Sch{\"o}nemann.
 Nicholas~J Higham.
 \newblock The symmetric procrustes problem.
 \newblock {\em BIT Numerical Mathematics}, 28(1):133--143, 1988.
+
+\bibitem{Watson1994}
+G.~A. Watson.
+\newblock The solution of orthogonal procrustes problems for a family of
+  orthogonally invariant norms.
+\newblock {\em Advances in Computational Mathematics}, 2(4):393--405, 1994.
+
+\bibitem{trendafilov2004l1}
+Nickolay~T Trendafilov and GA~Watson.
+\newblock The ℓ1 oblique procrustes problem.
+\newblock {\em Statistics and Computing}, 14(1):39--51, 2004.
+
+\bibitem{chu1990projected}
+Moody~T Chu and Kenneth~R Driessel.
+\newblock The projected gradient method for least squares matrix approximations
+  with spectral constraints.
+\newblock {\em SIAM Journal on Numerical Analysis}, 27(4):1050--1060, 1990.
 
 \bibitem{Berge2006}
 Jos M. F.~ten Berge.
