@@ -49,7 +49,7 @@
 
 \title{Solutions of Orthogonal Procrustes Problems under Partially Known Guidance}
 
-\author{Jun Xu }
+\author{Jun Xu and David Zhang }
 
 \markboth{Psychometrika}{ }
 
@@ -73,7 +73,7 @@ Abstract\vskip3pt
 \begin{abstract}
 The orthogonal Procrustes problem aims to find an orthogonal matrix which transforms one given matrix into another by minimizing their Frobenius matrix norm. This problem can be applied in applications such as permutation theory, machine learning, and camera calibration, \emph{etc}. In real cases, the permutation matrix may have been partially known, the dictionaries can be partially learned from external data, and the calibration of camera should be done under some fixed priors. This prior information makes the original orthogonal Procrustes problem more difficult. In this paper, we consider the solution of this problem under partially known priors, which includes the original orthogonal Procrustes problem as a special case with no such prior.
 \begin{keywords}
-orthogonal Procrustes problem, pratially known priors
+orthogonal Procrustes problem, partially known guidance
 \end{keywords}
 \end{abstract}
 
@@ -89,9 +89,11 @@ Let $\mathbf{A},\mathbf{B}\in\mathbb{R}^{n\times m}$ be two given matrices from 
 where ``$\top$'' means transpose operation. The solution of the transformation matrix $\mathbf{T}$ for problem (\ref{e1}) is
 $\mathbf{\hat{T}}=\mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}$ and $\mathbf{V}$ are obtained by performing singular value decomposition (SVD) on $\mathbf{B}\mathbf{A}^{\top}$ via $\mathbf{B}\mathbf{A}^{\top}=\mathbf{U}\mathbf{\Sigma}\mathbf{V}^{\top}$.
 
-Green \cite{green1952orthogonal} derived the solution of probelm (\ref{e1}) when the matrices $\mathbf{A}$ and $\mathbf{B}$ are of full column rank. Sch{\"o}nemann \cite{schonemann1966generalized} generalized the solution to matrices $\mathbf{A}$ and $\mathbf{B}$ of arbitrary rank and further studied the two-sided orthogonal Procrustes problems \cite{schonemann1968two}. Higham \cite{higham1988symmetric} studied the symmetric Procrustes problem by replacing the orthogonal restriction on $\mathbf{T}$ with symmetric $\mathbf{T}^{\top}=\mathbf{T}$. Later, Watson \emph{et al.} studied the solutions of orthogonal Procrustes problems under general matrix norms such as orthogonally invariant norms \cite{Watson1994} and the special $\ell_{1}$ norm \cite{trendafilov2004l1}. The solutions for the generalized problems are not in closed-form and need projected gradient methods \cite{chu1990projected} or the famous Newton's method. In \cite{trendafilov2004l1}, the more general weighted orthogonal Procrustes problem is also solved by projected gradient methods \cite{chu1990projected}. Recently, Berge \cite{Berge2006} further discussed the rigid rotation problem which requires the determinant of $\mathbf{T}$ is 1 (i.e., eliminating the possibility of reflection). Recently, Viklands studied the weighted orthogonal Procrustes problem in his/her PhD thesis and local and global solutions are presented therein.  
+Green \cite{green1952orthogonal} derived the solution of problem (\ref{e1}) when the matrices $\mathbf{A}$ and $\mathbf{B}$ are of full column rank. Sch{\"o}nemann \cite{schonemann1966generalized} generalized the solution to matrices $\mathbf{A}$ and $\mathbf{B}$ of arbitrary rank and further studied the two-sided orthogonal Procrustes problems \cite{schonemann1968two}. Higham \cite{higham1988symmetric} studied the symmetric Procrustes problem by replacing the orthogonal restriction on $\mathbf{T}$ with symmetric $\mathbf{T}^{\top}=\mathbf{T}$. Later, Watson \emph{et al.} studied the solutions of orthogonal Procrustes problems under general matrix norms such as orthogonally invariant norms \cite{Watson1994} and the special $\ell_{1}$ norm \cite{trendafilov2004l1}. The solutions for the generalized problems are not in closed-form and need projected gradient methods \cite{chu1990projected} or the famous Newton's method. In \cite{trendafilov2004l1}, the more general weighted orthogonal Procrustes problem is also solved by projected gradient methods \cite{chu1990projected}. Recently, Berge \cite{Berge2006} further discussed the rigid rotation problem which requires the determinant of $\mathbf{T}$ is 1 (i.e., eliminating the possibility of reflection). Recently, Viklands studied the weighted orthogonal Procrustes problem in his/her PhD thesis and local and global solutions are presented therein.  
 
-The classical orthogonal Procrustes problem \cite{procrustesprogram} has many applications including psychometrics, multidimensional scaling, factor analysis, rigid rotation \cite{Berge2006}, machine learning, computer vision, optical imaging, and robotics. In this paper, we study the solution of the orthogonal Procrustes problem when partial columns of the orthogonal transformatio matrix are known. This is possible and arised in the machine learning models in which the external date is employed to guide the learning of the internal data, which makes the dictionary more adaptive to the data being processed.
+The classical orthogonal Procrustes problem \cite{procrustesprogram} has many applications including factor analysis \cite{green1952orthogonal}, rigid rotation \cite{Berge2006}, machine learning \cite{zou2006sparse}, computer vision \cite{zhang2000flexible,pointpatterns}, optical imaging , and robotics. The extended two-sided orthogonal Procrustes problem has also been used in matrix perturbation problem \cite{schonemann1968two}. 
+
+In this paper, we study the solution of the orthogonal Procrustes problem when partial columns of the orthogonal transformation matrix are known. This is possibly emerged in practical applications. For examples, in the point matching problem \cite{pointpatterns}, if some points have already been matched, the matched data can be used to guide the matching of the remaining points. In the machine learning models such as dictionary learning \cite{aharon2006img}, if the external data is employed to guide the learning of the internal data, the dictionary learned will be more adapted to the data being processed.
 
 \section{Definition of the Problem and Solution}
 Let $\mathbf{A},\mathbf{B}\in \mathbb{R}^{n\times m}$ be two given data matrices. Define $\mathbf{X}\in\mathbb{R}^{n\times p}$ and $\mathbf{P}\in\mathbb{R}^{n\times q}$ where $p+q=n$. For simplicity, we assume $n\ge m$ and the other cases can be analyzed in a similar way. $\mathbf{X}$ is the partially known prior which could be used to guide the solutions of $\mathbf{P}$. We formulate the orthogonal Procrustes problem with partially known priors as:
@@ -129,7 +131,7 @@ s.t.
 \quad
 \mathbf{P}^{\top}\mathbf{P} = \mathbf{I}_{q\times q}, \mathbf{X}^{\top}\mathbf{P} = \mathbf{0}_{p\times q} 
 \end{equation}
-is $\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}\in \mathbb{R}^{n\times q}$ and $\mathbf{V}\in \mathbb{R}^{q\times q}$ are the orthogonal matrices obtained by perfroming economy (a.k.a. reduced) SVD:
+is $\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}\in \mathbb{R}^{n\times q}$ and $\mathbf{V}\in \mathbb{R}^{q\times q}$ are the orthogonal matrices obtained by performing economy (a.k.a. reduced) SVD:
 \begin{equation}
 (\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top} = \mathbf{U}\mathbf{\mathbf{\Sigma}}\mathbf{V}^{\top}
 \end{equation}
@@ -184,7 +186,7 @@ Put the results back to Equ. (7), we have
 =
 0.
 \end{equation}
-Or equivaliently, 
+Or equivalently,
 \begin{equation}
 (\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}
 =
@@ -197,9 +199,9 @@ Right multiplying Equ. (10) by $\mathbf{P}^{\top}$, we have
 \mathbf{P}(\Gamma_{1}+\Gamma_{1}^{\top})\mathbf{P}^{\top}
 .
 \end{equation}
-This shows that $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}\mathbf{P}^{\top}$ is a symmertric matrix of order $n\times n$. Then we perfrom economy (or reduced) singular value decomposition (SVD) on $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}$ and get 
+This shows that $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}\mathbf{P}^{\top}$ is a symmetric matrix of order $n\times n$. Then we perform economy (or reduced) singular value decomposition (SVD) on $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}$ and get 
 $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}=\mathbf{U}\mathbf{\Sigma}\mathbf{V}^{\top}$.
-Since $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}\mathbf{P}^{\top}$ is symmertric, we have
+Since $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}\mathbf{P}^{\top}$ is symmetric, we have
 \begin{equation}
 (\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}\mathbf{P}^{\top}
 =
@@ -207,7 +209,7 @@ Since $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^
 =
 \mathbf{P}\mathbf{V}\mathbf{\Sigma}\mathbf{U}^{\top}
 \end{equation}
-and hence we have $\mathbf{U}=\mathbf{P}\mathbf{V}$ and equivalently $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$. Note that we can also employ the property of symmertric matrix that every symmertric matrix can be diagonalized to obtain this results. The necessary condition is proofed. 
+and hence we have $\mathbf{U}=\mathbf{P}\mathbf{V}$ and equivalently $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$. Note that we can also employ the property of symmetric matrix that every symmetric matrix can be diagonalized to obtain this results. The necessary condition is proofed. 
 
 Now we proof the sufficiency condition. If $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$, then $\mathbf{\hat{P}}$ satisfies that $\mathbf{\hat{P}}^{\top}\mathbf{\hat{P}}=\mathbf{I}_{q\times q}$ and $\mathbf{X}^{\top}\mathbf{\hat{P}}=\mathbf{0}_{p\times q}$. The first is obvious and now we consider the second one. From the Equ. (4), since $\mathbf{X}^{\top}\mathbf{X}=\mathbf{I}_{p\times p}$, we have  
 \begin{equation}
@@ -225,7 +227,7 @@ Besides, since
 =\|\mathbf{B}\|_{F}^{2}+\|\mathbf{P}\mathbf{A}\|_{F}^{2}-2\text{Tr}(\mathbf{B}^{\top}\mathbf{P}\mathbf{A}),
 \end{split}
 \end{equation}
-Until now, if we want to proof that $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$ is the solution of problem (3), $\text{Tr}(\mathbf{B}^{\top}\mathbf{\hat{P}}\mathbf{A})$ has to be a maximum if $\|\mathbf{B}-\mathbf{\hat{P}}\mathbf{A}\|_{F}^{2}$ is to be a minimum, over all $\mathbf{P}$ satisfying the subject condition in Equ. (3).
+Until now, if we want to proof that $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$ is the solution of problem (3), $\text{Tr}(\mathbf{B}^{\top}\mathbf{\hat{P}}\mathbf{A})$ has to be a maximum if $\|\mathbf{B}-\mathbf{\hat{P}}\mathbf{A}\|_{F}^{2}$ is to be a minimum, as long as $\mathbf{P}$ satisfying the conditions in Equ. (3).
 Note that by cyclic perturbation which retains the trace unchanged and due to $\mathbf{X}^{\top}\mathbf{\hat{P}}=\mathbf{0}_{p\times q}$, we have 
 \begin{equation}
 \begin{split}
@@ -264,7 +266,7 @@ $\mathbf{V}^{\top}\mathbf{P}^{\top}\mathbf{U}=\mathbf{I}_{q\times q}$, i.e., $\m
 
 Note that if the partially known prior were not present, the solution is clearly the solution of the original orthogonal Procrustes problem, i.e., $\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}$ and $\mathbf{V}$ are the orthogonal matrices obtained by perfroming economy (a.k.a. reduced) SVD:
 $\mathbf{B}\mathbf{A}^{\top} = \mathbf{U}\mathbf{\mathbf{\Sigma}}\mathbf{V}^{\top}$. 
-The difference between the solutions of the original orthogonal Procrustes problem and its partially known prior version quantify the effect on the residual of requiring $\mathbf{P}$ to be orgothonal to the external prior $\mathbf{P}^{\top}\mathbf{X}$.
+The difference between the solutions of the original orthogonal Procrustes problem and its partially known prior version quantify the effect on the residual of requiring $\mathbf{P}$ to be orthogonal to the external prior $\mathbf{P}^{\top}\mathbf{X}$.
 
 
 \section{Uniqueness of Solution $\mathbf{\hat{P}}$}

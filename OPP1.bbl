@@ -35,7 +35,7 @@ G.~A. Watson.
 
 \bibitem{trendafilov2004l1}
 Nickolay~T Trendafilov and GA~Watson.
-\newblock The ℓ1 oblique procrustes problem.
+\newblock The $\ell_{1}$ oblique procrustes problem.
 \newblock {\em Statistics and Computing}, 14(1):39--51, 2004.
 
 \bibitem{chu1990projected}
@@ -48,6 +48,32 @@ Moody~T Chu and Kenneth~R Driessel.
 Jos M. F.~ten Berge.
 \newblock The rigid orthogonal procrustes rotation problem.
 \newblock {\em Psychometrika}, 71(1):201--205, 2006.
+
+\bibitem{zou2006sparse}
+Hui Zou, Trevor Hastie, and Robert Tibshirani.
+\newblock Sparse principal component analysis.
+\newblock {\em Journal of computational and graphical statistics},
+  15(2):265--286, 2006.
+
+\bibitem{zhang2000flexible}
+Zhengyou Zhang.
+\newblock A flexible new technique for camera calibration.
+\newblock {\em IEEE Transactions on pattern analysis and machine intelligence},
+  22(11):1330--1334, 2000.
+
+\bibitem{pointpatterns}
+S.~Umeyama.
+\newblock Least-squares estimation of transformation parameters between two
+  point patterns.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  13(4):376--380, Apr 1991.
+
+\bibitem{aharon2006img}
+Michal Aharon, Michael Elad, and Alfred Bruckstein.
+\newblock K-svd: An algorithm for designing overcomplete dictionaries for
+  sparse representation.
+\newblock {\em IEEE Transactions on signal processing}, 54(11):4311--4322,
+  2006.
 
 \bibitem{TenBerge1983}
 Jos M.~F. Ten~Berge.
