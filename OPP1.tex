@@ -93,7 +93,7 @@ Green \cite{green1952orthogonal} derived the solution of problem (\ref{e1}) when
 
 The classical orthogonal Procrustes problem \cite{procrustesprogram} has many applications including factor analysis \cite{green1952orthogonal}, rigid rotation \cite{Berge2006}, machine learning \cite{zou2006sparse}, computer vision \cite{zhang2000flexible,pointpatterns}, optical imaging , and robotics. The extended two-sided orthogonal Procrustes problem has also been used in matrix perturbation problem \cite{schonemann1968two}. 
 
-In this paper, we study the solution of the orthogonal Procrustes problem when partial columns of the orthogonal transformation matrix are known. This is possibly emerged in practical applications. For examples, in the point matching problem \cite{pointpatterns}, if some points have already been matched, the matched data can be used to guide the matching of the remaining points. In the machine learning models such as dictionary learning \cite{aharon2006img}, if the external data is employed to guide the learning of the internal data, the dictionary learned will be more adapted to the data being processed.
+In this paper, we study the solution of the orthogonal Procrustes problem when partial columns of the orthogonal transformation matrix are known. This is possibly emerged in practical applications. For examples, in the point matching problem \cite{pointpatterns}, if some points have already been matched, the matched data can be used to guide the matching of the remaining points. In the machine learning models such as dictionary learning \cite{aharon2006img}, if the external data is employed to guide the learning of the internal data, the dictionary learned will be more adapted to the data being processed. Besides, we proof the sufficiency condition of the solution by using the generalized Kristof's Theorem \cite{TenBerge1983}, which is clearly different from the proof in \cite{schonemann1966generalized}.
 
 \section{Definition of the Problem and Solution}
 Let $\mathbf{A},\mathbf{B}\in \mathbb{R}^{n\times m}$ be two given data matrices. Define $\mathbf{X}\in\mathbb{R}^{n\times p}$ and $\mathbf{P}\in\mathbb{R}^{n\times q}$ where $p+q=n$. For simplicity, we assume $n\ge m$ and the other cases can be analyzed in a similar way. $\mathbf{X}$ is the partially known prior which could be used to guide the solutions of $\mathbf{P}$. We formulate the orthogonal Procrustes problem with partially known priors as:
@@ -170,13 +170,13 @@ where $\Gamma$ is the Lagrange multiplier. Take the derivative of $\mathcal{L}$ 
 =
 0.
 \end{equation}
-Since $\mathbf{P}^{\top}\mathbf{P}=\mathbf{I}_{q\times q}$ and $\mathbf{X}^{\top}\mathbf{P} = \mathbf{0}_{p\times q}$, by left multiplying the Equ. (7) by $\mathbf{X}^{\top}$, we have 
+Since $\mathbf{P}^{\top}\mathbf{P}=\mathbf{I}_{q\times q}$ and $\mathbf{X}^{\top}\mathbf{P} = \mathbf{0}_{p\times q}$, by left multiplying the Eq. (7) by $\mathbf{X}^{\top}$, we have 
 \begin{equation}
 \mathbf{X}^{\top}\mathbf{B}\mathbf{A}^{\top}
 =
 \Gamma_{2}^{\top}.
 \end{equation}
-Put the results back to Equ. (7), we have 
+Put the results back to Eq. (7), we have 
 \begin{equation}
 \mathbf{B}\mathbf{A}^{\top}
 -
@@ -192,7 +192,7 @@ Or equivalently,
 =
 \mathbf{P}(\Gamma_{1}+\Gamma_{1}^{\top}).
 \end{equation}
-Right multiplying Equ. (10) by $\mathbf{P}^{\top}$, we have
+Right multiplying Eq. (10) by $\mathbf{P}^{\top}$, we have
 \begin{equation}
 (\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}\mathbf{P}^{\top}
 =
@@ -211,7 +211,7 @@ Since $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^
 \end{equation}
 and hence we have $\mathbf{U}=\mathbf{P}\mathbf{V}$ and equivalently $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$. Note that we can also employ the property of symmetric matrix that every symmetric matrix can be diagonalized to obtain this results. The necessary condition is proofed. 
 
-Now we proof the sufficiency condition. If $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$, then $\mathbf{\hat{P}}$ satisfies that $\mathbf{\hat{P}}^{\top}\mathbf{\hat{P}}=\mathbf{I}_{q\times q}$ and $\mathbf{X}^{\top}\mathbf{\hat{P}}=\mathbf{0}_{p\times q}$. The first is obvious and now we consider the second one. From the Equ. (4), since $\mathbf{X}^{\top}\mathbf{X}=\mathbf{I}_{p\times p}$, we have  
+Now we proof the sufficiency condition. If $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$, then $\mathbf{\hat{P}}$ satisfies that $\mathbf{\hat{P}}^{\top}\mathbf{\hat{P}}=\mathbf{I}_{q\times q}$ and $\mathbf{X}^{\top}\mathbf{\hat{P}}=\mathbf{0}_{p\times q}$. The first is obvious and now we consider the second one. From the Eq. (4), since $\mathbf{X}^{\top}\mathbf{X}=\mathbf{I}_{p\times p}$, we have  
 \begin{equation}
 \mathbf{X}^{\top}(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}=\mathbf{X}^{\top}\mathbf{B}\mathbf{A}^{\top}-\mathbf{X}^{\top}\mathbf{X}\mathbf{X}^{\top}\mathbf{B}\mathbf{A}^{\top}
 =
@@ -227,7 +227,7 @@ Besides, since
 =\|\mathbf{B}\|_{F}^{2}+\|\mathbf{P}\mathbf{A}\|_{F}^{2}-2\text{Tr}(\mathbf{B}^{\top}\mathbf{P}\mathbf{A}),
 \end{split}
 \end{equation}
-Until now, if we want to proof that $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$ is the solution of problem (3), $\text{Tr}(\mathbf{B}^{\top}\mathbf{\hat{P}}\mathbf{A})$ has to be a maximum if $\|\mathbf{B}-\mathbf{\hat{P}}\mathbf{A}\|_{F}^{2}$ is to be a minimum, as long as $\mathbf{P}$ satisfying the conditions in Equ. (3).
+Until now, if we want to proof that $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$ is the solution of problem (3), $\text{Tr}(\mathbf{B}^{\top}\mathbf{\hat{P}}\mathbf{A})$ has to be a maximum if $\|\mathbf{B}-\mathbf{\hat{P}}\mathbf{A}\|_{F}^{2}$ is to be a minimum, as long as $\mathbf{P}$ satisfying the conditions in Eq. (3).
 Note that by cyclic perturbation which retains the trace unchanged and due to $\mathbf{X}^{\top}\mathbf{\hat{P}}=\mathbf{0}_{p\times q}$, we have 
 \begin{equation}
 \begin{split}
@@ -291,7 +291,7 @@ can be determined up to orientation. Hence, we can reformulate the SVD as
 \end{equation}
 where $\mathbf{U}^{*}\in \mathbb{R}^{n\times q}$ and $\mathbf{V}^{*}\in \mathbb{R}^{q\times q}$ are arbitrarily orientated singular vectors of $\mathbf{U}$ and $\mathbf{V}$, respectively. $\mathbf{\Sigma}\in \mathbb{R}^{q\times q}$ are diagonal matrix with singular values are arranged in weak descending order along the diagonal, i.e., $\mathbf{\Sigma}_{11}\ge\mathbf{\Sigma}_{22}\ge...\ge\mathbf{\Sigma}_{qq}\ge0$. The $\mathbf{K}_{u}$ and $\mathbf{K}_{v}$ are diagonal matrices with $+1$ or $-1$ as diagonal elements in arbitrary distribution. If we fix $\mathbf{K}_{u}$, then $\mathbf{K}_{v}$ is uniquely determined to meet the requirement that the diagonal elements of $\mathbf{\Sigma}$ should be nonnegative. And the orientations of the singular vectors of $\mathbf{U}^{*}$ is fixed, then the $\mathbf{U}=\mathbf{U}^{*}\mathbf{K}_{u}$ is determined, so does the orientations of the singular vectors of $\mathbf{V}^{*}$ and $\mathbf{V}^{\top}=\mathbf{K}_{v}(\mathbf{V}^{*})^{\top}$. In this case, the solution of $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}=\mathbf{U}^{*}\mathbf{K}_{u}\mathbf{K}_{v}(\mathbf{V}^{*})^{\top}$ is unique. The case that the $\mathbf{\Sigma}$ have multiple singular values also has unique solution of $\mathbf{\hat{P}}$, which can be discussed in a similar way. 
 
-If $0\le\text{rank}(\mathbf{\Sigma})=r< q$, there is $q-r$ (at least one) zero singular values and we call this case the degenerative case. The previous discussion on non-degenerative case still can be applied to the singular vectors related to the nonzero singular values, and this part is still unique. However, the singular vectors related to the zero singular values can be in arbitrary orientations as long as they satisfy the orthogonal conditions that $\mathbf{U}^{\top}\mathbf{U}=\mathbf{V}^{\top}\mathbf{V}=\mathbf{V}\mathbf{V}^{\top}=\mathbf{I}_{q\times q}$. Note that $\mathbf{U}\in \mathbb{R}^{n\times q}$, so $\mathbf{U}\mathbf{U}^{\top}$ no longer equals to the identity matrix of order $n$. From Equ. (12), we can get 
+If $0\le\text{rank}(\mathbf{\Sigma})=r< q$, there is $q-r$ (at least one) zero singular values and we call this case the degenerative case. The previous discussion on non-degenerative case still can be applied to the singular vectors related to the nonzero singular values, and this part is still unique. However, the singular vectors related to the zero singular values can be in arbitrary orientations as long as they satisfy the orthogonal conditions that $\mathbf{U}^{\top}\mathbf{U}=\mathbf{V}^{\top}\mathbf{V}=\mathbf{V}\mathbf{V}^{\top}=\mathbf{I}_{q\times q}$. Note that $\mathbf{U}\in \mathbb{R}^{n\times q}$, so $\mathbf{U}\mathbf{U}^{\top}$ no longer equals to the identity matrix of order $n$. From Eq. (12), we can get 
 \begin{equation}
 \mathbf{U}\mathbf{\Sigma}\mathbf{V}^{\top}\mathbf{P}^{\top}
 =
