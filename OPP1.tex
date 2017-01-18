@@ -84,13 +84,12 @@ Let $\mathbf{A},\mathbf{B}\in\mathbb{R}^{n\times m}$ be two given matrices from 
 \quad
 \text{s.t.}
 \quad
-\mathbf{T}^{\top}\mathbf{T} = \mathbf{I}_{n\times n}
+\mathbf{T}^{\top}\mathbf{T} = \mathbf{I}_{n\times n},
 \end{equation}
-The solution of the transformation matrix $\mathbf{T}$ for problem (\ref{e1}) is
+where ``$\top$'' means transpose operation. The solution of the transformation matrix $\mathbf{T}$ for problem (\ref{e1}) is
 $\mathbf{\hat{T}}=\mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}$ and $\mathbf{V}$ are obtained by performing singular value decomposition (SVD) on $\mathbf{B}\mathbf{A}^{\top}$ via $\mathbf{B}\mathbf{A}^{\top}=\mathbf{U}\mathbf{\Sigma}\mathbf{V}^{\top}$.
 
-Green \cite{green1952orthogonal} derived the solution of probelm (\ref{e1}) when the matrices $\mathbf{A}$ and $\mathbf{B}$ are of full column rank. Sch{\"o}nemann \cite{schonemann1966generalized} generalized the solution to matrices $\mathbf{A}$ and $\mathbf{B}$ of arbitrary rank.
-
+Green \cite{green1952orthogonal} derived the solution of probelm (\ref{e1}) when the matrices $\mathbf{A}$ and $\mathbf{B}$ are of full column rank. Sch{\"o}nemann \cite{schonemann1966generalized} generalized the solution to matrices $\mathbf{A}$ and $\mathbf{B}$ of arbitrary rank and further studied the two-sided orthogonal Procrustes problems \cite{schonemann1968two}. Higham \cite{higham1988symmetric} studied the symmetric Procrustes problem by replacing the orthogonal restriction on $\mathbf{T}$ with symmetric $\mathbf{T}^{\top}=\mathbf{T}$.
 
 This is the classical orthogonal Procrustes problem \cite{procrustesprogram} which has been applied in psychometrics, multidimensional scaling, factor analysis, rigid rotation \cite{Berge2006}, machine learning, computer vision, optical imaging, and robotics.
 

@@ -17,6 +17,16 @@ Peter~H Sch{\"o}nemann.
 \newblock A generalized solution of the orthogonal procrustes problem.
 \newblock {\em Psychometrika}, 31(1):1--10, 1966.
 
+\bibitem{schonemann1968two}
+Peter~H Sch{\"o}nemann.
+\newblock On two-sided orthogonal procrustes problems.
+\newblock {\em Psychometrika}, 33(1):19--33, 1968.
+
+\bibitem{higham1988symmetric}
+Nicholas~J Higham.
+\newblock The symmetric procrustes problem.
+\newblock {\em BIT Numerical Mathematics}, 28(1):133--143, 1988.
+
 \bibitem{Berge2006}
 Jos M. F.~ten Berge.
 \newblock The rigid orthogonal procrustes rotation problem.
