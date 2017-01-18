@@ -78,14 +78,26 @@ orthogonal Procrustes problem, pratially known priors
 \end{abstract}
 
 \section{Introduction}
-The classical orthogonal Procrustes problem has been applied in psychometrics, multidimensional scaling, factor analysis, rigid rotation \cite{Berge2006}, machine learning, computer vision, optical imaging, and robotics.
+Let $\mathbf{A},\mathbf{B}\in\mathbb{R}^{n\times m}$ be two given matrices from observed data, we consider the problem of transforming the matrix $\mathbf{A}$ into $\mathbf{B}$ by an orthogonal matrix $\mathbf{T}\in\mathbb{R}^{n\times n}$ so that the error between the matrix $\mathbf{B}$ and the $\mathbf{T}\mathbf{A}$ is minimized under the least square sense. This is the classical orthogonal Procrustes problem \cite{procrustesprogram} which can be formally stated as follows:
+\begin{equation}\label{e1}
+\min_{\mathbf{T}}\|\mathbf{B}-\mathbf{T}\mathbf{A}\|_{F}^{2}
+\quad
+\text{s.t.}
+\quad
+\mathbf{T}^{\top}\mathbf{T} = \mathbf{I}_{n\times n}
+\end{equation}
+The solution of the transformation matrix $\mathbf{T}$ for problem (\ref{e1}) is
+$\mathbf{\hat{T}}=\mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}$ and $\mathbf{V}$ are obtained by the singular value decomposition (SVD) of $\mathbf{B}\mathbf{A}^{\top}$ via $\mathbf{B}\mathbf{A}^{\top}=\mathbf{U}\mathbf{\Sigma}\mathbf{V}^{\top}$.
+
+
+This is the classical orthogonal Procrustes problem \cite{procrustesprogram} which has been applied in psychometrics, multidimensional scaling, factor analysis, rigid rotation \cite{Berge2006}, machine learning, computer vision, optical imaging, and robotics.
 
 \section{Definition of the Problem and Solution}
 Let $\mathbf{A},\mathbf{B}\in \mathbb{R}^{n\times m}$ be two given data matrices. Define $\mathbf{X}\in\mathbb{R}^{n\times p}$ and $\mathbf{P}\in\mathbb{R}^{n\times q}$ where $p+q=n$. For simplicity, we assume $n\ge m$ and the other cases can be analyzed in a similar way. $\mathbf{X}$ is the partially known prior which could be used to guide the solutions of $\mathbf{P}$. We formulate the orthogonal Procrustes problem with partially known priors as:
 \begin{equation}
 \mathbf{\hat{P}}=\arg\min_{\mathbf{D}}\|\mathbf{B}-[\mathbf{X}\ \mathbf{P}]\mathbf{A}\|_{F}^{2}
 \quad
-s.t.
+\text{s.t.}
 \quad
 \mathbf{P}^{\top}\mathbf{P} = \mathbf{I}_{q\times q}, \mathbf{X}^{\top}\mathbf{P} = \mathbf{0}_{p\times q}.
 \end{equation} 
