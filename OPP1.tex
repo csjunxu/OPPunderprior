@@ -20,6 +20,9 @@
 \usepackage{arydshln}
 \usepackage{cite}
 
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+
 % to make the words are in a line on column
 \usepackage{ragged2e}
 \justifying
@@ -96,7 +99,7 @@ The classical orthogonal Procrustes problem \cite{procrustesprogram} has many ap
 In this paper, we study the solution of the orthogonal Procrustes problem when partial columns of the orthogonal transformation matrix are known. This is possibly emerged in practical applications. For examples, in the point matching problem \cite{pointpatterns}, if some points have already been matched, the matched data can be used to guide the matching of the remaining points. In the machine learning models such as dictionary learning \cite{aharon2006img}, if the external data is employed to guide the learning of the internal data, the dictionary learned will be more adapted to the data being processed. Besides, we proof the sufficiency condition of the solution by using the generalized Kristof's Theorem \cite{TenBerge1983}, which is clearly different from the proof in \cite{schonemann1966generalized}.
 
 \section{Definition of the Problem and Solution}
-Let $\mathbf{A},\mathbf{B}\in \mathbb{R}^{n\times m}$ be two given data matrices. Define $\mathbf{X}\in\mathbb{R}^{n\times p}$ and $\mathbf{P}\in\mathbb{R}^{n\times q}$ where $p+q=n$. For simplicity, we assume $n\ge m$ and the other cases can be analyzed in a similar way. $\mathbf{X}$ is the partially known prior which could be used to guide the solutions of $\mathbf{P}$. We formulate the orthogonal Procrustes problem with partially known priors as:
+Assume $\mathbf{A},\mathbf{B}\in \mathbb{R}^{n\times m}$ be two given data matrices. Let $\mathbf{X}\in\mathbb{R}^{n\times p}$ and $\mathbf{P}\in\mathbb{R}^{n\times q}$ ($p+q=n$), where $\mathbf{X}$ is the partially known guidance employed to guide the solutions of $\mathbf{P}$. From the Section 1, we can see that $[\mathbf{X}\ \mathbf{P}]=\mathbf{T}\in\mathbb{R}^{n\times n}$ is the orthonormal matrix which transform the matrix $\mathbf{A}$ to best fit the matrix $\mathbf{B}$ under the least square sense. Instead of obtaining $\mathbf{T}$ in classical orthogonal Proctustes problem, we need to obtain part of $\mathbf{T}$ with partially known guidance in the guidance version. For simplicity, we assume $n\ge m$ and the other cases can be analyzed in a similar way. We formulate the orthogonal Procrustes problem with partially known priors as:
 \begin{equation}
 \mathbf{\hat{P}}=\arg\min_{\mathbf{D}}\|\mathbf{B}-[\mathbf{X}\ \mathbf{P}]\mathbf{A}\|_{F}^{2}
 \quad
@@ -104,10 +107,12 @@ Let $\mathbf{A},\mathbf{B}\in \mathbb{R}^{n\times m}$ be two given data matrices
 \quad
 \mathbf{P}^{\top}\mathbf{P} = \mathbf{I}_{q\times q}, \mathbf{X}^{\top}\mathbf{P} = \mathbf{0}_{p\times q}.
 \end{equation} 
-In fact, as have been proofed, if the matrix $\mathbf{\mathbf{B}\mathbf{A}^{\top}}$ has no zero singular value, then the solution of  
-$\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$ is unique and we do not need any preceding results.
+Note that the original orthogonal Procrustes problems is a special case of the problem discussed in this paper. When there is no guidance at all, i.e., $\mathbf{X}=\oldemptyset$, we have $p=0,q=n$ and the studied problem is reduced to the classical orthgonal Procrustes problem.
 
-We crop the matrix $\mathbf{A}$ into two parts: $\mathbf{A}_{X}\in\mathbb{R}^{p\times m}$ and $\mathbf{A}_{P}\in\mathbb{R}^{q\times m}$ to interact with $\mathbf{X}$ and $\mathbf{P}$, respectively. Then we have 
+%In fact, as have been proofed, if the matrix $\mathbf{\mathbf{B}\mathbf{A}^{\top}}$ has no zero singular value, then the solution of  
+%$\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$ is unique and we do not need any preceding results.
+
+When the partially known guidance $\mathbf{X}\neq\oldemptyset$, we crop the matrix $\mathbf{A}$ into two parts: $\mathbf{A}_{X}\in\mathbb{R}^{p\times m}$ and $\mathbf{A}_{P}\in\mathbb{R}^{q\times m}$ to interact with $\mathbf{X}$ and $\mathbf{P}$, respectively. Then we have 
 \begin{equation}
 \begin{split}
 &
