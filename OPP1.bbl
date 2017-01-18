@@ -52,13 +52,13 @@ Jos M. F.~ten Berge.
 \bibitem{zou2006sparse}
 Hui Zou, Trevor Hastie, and Robert Tibshirani.
 \newblock Sparse principal component analysis.
-\newblock {\em Journal of computational and graphical statistics},
+\newblock {\em Journal of Computational and Graphical Statistics},
   15(2):265--286, 2006.
 
 \bibitem{zhang2000flexible}
 Zhengyou Zhang.
 \newblock A flexible new technique for camera calibration.
-\newblock {\em IEEE Transactions on pattern analysis and machine intelligence},
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
   22(11):1330--1334, 2000.
 
 \bibitem{pointpatterns}
@@ -70,9 +70,9 @@ S.~Umeyama.
 
 \bibitem{aharon2006img}
 Michal Aharon, Michael Elad, and Alfred Bruckstein.
-\newblock K-svd: An algorithm for designing overcomplete dictionaries for
+\newblock {K-SVD}: An algorithm for designing overcomplete dictionaries for
   sparse representation.
-\newblock {\em IEEE Transactions on signal processing}, 54(11):4311--4322,
+\newblock {\em IEEE Transactions on Signal Processing}, 54(11):4311--4322,
   2006.
 
 \bibitem{TenBerge1983}
