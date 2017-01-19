@@ -50,7 +50,7 @@
 
 \linespacing{1}
 
-\title{Solutions of Orthogonal Procrustes Problems under Partially Known Guidance}
+\title{Solutions of Orthogonal Procrustes Problems under Partially Known columns}
 
 \author{Jun Xu and David Zhang }
 
@@ -74,9 +74,9 @@ Abstract\vskip3pt
 
 
 \begin{abstract}
-The orthogonal Procrustes problem aims to find an orthogonal matrix $\mathbf{T}$ which transforms one given matrix $\mathbf{A}$ into another one $\mathbf{B}$ by minimizing the residual difference under Frobenius matrix norm, i.e., $\|\mathbf{B}-\mathbf{T}\mathbf{A}\|_{F}^{2}$. This problem can be applied in factor analysis, dictionary learning, camera calibration, and robotics \emph{etc}. In many real applications, some certain factors may have been partially known previously, some dictionary items could be partially learned beforehand \cite{aharon2006img}, and the Z-axis is usually fixed before the calibration of camera \cite{zhang2000flexible},\emph{etc}. All these prior information could be viewed as partially known guidance and would influence the whole orthogonal transformation matrix, and hence makes the original orthogonal Procrustes problem more difficult. In this paper, we studied the solution of orthogonal Procrustes problem under partially known guidance, which includes the original orthogonal Procrustes problem as a special case.
+The orthogonal Procrustes problem aims to find an orthogonal matrix $\mathbf{T}$ which transforms one given matrix $\mathbf{A}$ into another one $\mathbf{B}$ by minimizing the residual difference under Frobenius norm of matrix, i.e., $\min\|\mathbf{B}-\mathbf{T}\mathbf{A}\|_{F}^{2}$. This problem can be applied in factor analysis, dictionary learning, camera calibration, and robotics \emph{etc}. In many real applications, some certain factors may have been partially known previously, some dictionary items could be partially learned beforehand \cite{aharon2006img}, and the Z-axis is usually fixed before the calibration of camera \cite{zhang2000flexible},\emph{etc}. All these prior information could be formulated as partially known columns and would influence the solution of the whole orthogonal transformation matrix, and hence makes the original orthogonal Procrustes problem more difficult. In this paper, we studied the solution of orthogonal Procrustes problem under partially known columns, which includes the original orthogonal Procrustes problem as a special case.
 \begin{keywords}
-Orthogonal Procrustes problem, partially known guidance
+Orthogonal Procrustes problem, partially known columns
 \end{keywords}
 \end{abstract}
 
