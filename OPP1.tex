@@ -92,7 +92,7 @@ Let $\mathbf{A},\mathbf{B}\in\mathbb{R}^{n\times m}$ be two given matrices of ob
 where ``$\top$'' stands for the transpose operation. As Sch{\"o}nemann pointed out in \cite{schonemann1966generalized}, the solution of the orthogonal transformation matrix $\mathbf{T}$ for problem (\ref{e1}) is
 $\mathbf{\hat{T}}=\mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}\in\mathbb{R}^{n\times n}$ and $\mathbf{V}\in\mathbb{R}^{n\times n}$ are obtained by performing singular value decomposition (SVD) on $\mathbf{B}\mathbf{A}^{\top}$ via $\mathbf{B}\mathbf{A}^{\top}=\mathbf{U}\mathbf{\Sigma}\mathbf{V}^{\top}$.
 
-Many researchers have studied this problem in different perspectives. Green \cite{green1952orthogonal} derived the solution of problem (\ref{e1}) when the matrices $\mathbf{A}$ and $\mathbf{B}$ are of full column rank. Sch{\"o}nemann \cite{schonemann1966generalized} generalized the solution of problem (\ref{e1}) to matrices $\mathbf{A}$ and $\mathbf{B}$ of arbitrary rank. Sch{\"o}nemann further studied the two-sided orthogonal Procrustes problems \cite{schonemann1968two}. Lissitz \emph{et al.} \cite{Lissitz1976} and Koschat \cite{Koschat1991} studied the weighted orthogonal Procrustes problems, in which the weights are arranged as a diagonal matrix. More details about weighted orthogonal Procrustes problems can be found in Viklands's PhD thesis \cite{viklands2006algorithms}. Higham \cite{higham1988symmetric} studied the symmetric Procrustes problem by replacing the orthogonal restriction of $\mathbf{T}^{\top}\mathbf{T}=\mathbf{I}_{n\times n}$ with the symmetric restriction of $\mathbf{T}^{\top}=\mathbf{T}$. Later, Watson \emph{et al.} studied the solutions of orthogonal Procrustes problems under general matrix norms such as orthogonally invariant norms \cite{Watson1994} and the commonly studied $\ell_{1}$ norm \cite{trendafilov2004l1}. The Procrustes problems under orthogonally invariant norms usually could not be solved in closed-form. Instead, iterative manners are proposed which involved techniques such as projected gradient methods \cite{chu1990projected} and the famous Newton's method. In \cite{trendafilov2004l1}, the weighted orthogonal Procrustes problem is also solved by projected gradient methods \cite{chu1990projected}. Berge \cite{Berge2006} further discussed the rigid rotation problems which require the determinant of the orthogonal transformation matrix $\mathbf{T}$ to be 1 (i.e., eliminating the possibility of reflection or flip).
+Many researchers have studied this problem in different perspectives. Green \cite{green1952orthogonal} derived the solution of problem (\ref{e1}) when the matrices $\mathbf{A}$ and $\mathbf{B}$ are of full column rank. Sch{\"o}nemann \cite{schonemann1966generalized} generalized the solution of problem (\ref{e1}) to matrices $\mathbf{A}$ and $\mathbf{B}$ of arbitrary rank. Sch{\"o}nemann further studied the two-sided orthogonal Procrustes problems \cite{schonemann1968two}. Lissitz \emph{et al.} \cite{Lissitz1976} and Koschat \cite{Koschat1991} studied the weighted orthogonal Procrustes problems, in which the weights are arranged as a diagonal matrix. More details about weighted orthogonal Procrustes problems can be found in Viklands' PhD thesis \cite{viklands2006algorithms}. Higham \cite{higham1988symmetric} studied the symmetric Procrustes problem by replacing the orthogonal restriction of $\mathbf{T}^{\top}\mathbf{T}=\mathbf{I}_{n\times n}$ with the symmetric restriction of $\mathbf{T}^{\top}=\mathbf{T}$. Later, Watson \emph{et al.} studied the solutions of orthogonal Procrustes problems under general matrix norms such as orthogonally invariant norms \cite{Watson1994} and the commonly studied $\ell_{1}$ norm \cite{trendafilov2004l1}. The Procrustes problems under orthogonally invariant norms usually could not be solved in closed-form. Instead, iterative manners are proposed which involved techniques such as projected gradient methods \cite{chu1990projected} and the famous Newton's method. In \cite{trendafilov2004l1}, the weighted orthogonal Procrustes problem is also solved by projected gradient methods \cite{chu1990projected}. Berge \cite{Berge2006} further discussed the rigid rotation problems which require the determinant of the orthogonal transformation matrix $\mathbf{T}$ to be 1 (i.e., eliminating the possibility of reflection or flip).
 
 The classical orthogonal Procrustes problem \cite{procrustesprogram} has wide applications in different research fields, such as factor analysis \cite{green1952orthogonal}, rigid rotation \cite{Berge2006} in robotics, dimensional reduction \cite{zou2006sparse} in machine learning, camera calibration \cite{zhang2000flexible} and point matching \cite{pointpatterns} in computer vision, dictionary learning \cite{aharon2006img} in signal processing, \emph{etc}. The extended two-sided orthogonal Procrustes problem has been applied into matrix perturbation problems \cite{schonemann1968two}.
 
@@ -123,7 +123,7 @@ Here, $\mathbf{B}-\mathbf{X}\mathbf{A}_{X}^{\top}$ is a known data matrix and we
 $\mathbf{B}^{*}=\mathbf{B}-\mathbf{X}\mathbf{A}_{X}^{\top}$. In the following Results 1, we remove the notation ``$*$'' and directly use $\mathbf{B}$ to replace $\mathbf{B}-\mathbf{X}\mathbf{A}_{X}^{\top}$ as the finally known data matrix. Besides, we remove the subscript ``$P$'' in $\mathbf{A}_{P}$ for symbol simplicity.
 
 \textbf{Results 1}: Let $\mathbf{A}\in \mathbb{R}^{q\times m}$, $\mathbf{B}\in \mathbb{R}^{n\times m}$ ($n\ge m$) be two given data matrices, $\mathbf{X}$ is a given matrix consisting of partially known columns satisfying $\mathbf{X}^{\top}\mathbf{X}=\mathbf{I}_{p\times p}$, then the sufficiency and necessary conditions of
-\begin{equation}
+\begin{equation}\label{e4}
 \mathbf{\hat{P}}=\arg\min_{\mathbf{P}}\|\mathbf{B}-\mathbf{P}\mathbf{A}\|_{F}^{2}
 \quad
 \text{s.t.}
@@ -200,23 +200,29 @@ Right multiplying both sides of Eq. (\ref{e11}) by $\mathbf{P}^{\top}$, we have
 \end{equation}
 This shows that $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}\mathbf{P}^{\top}$ is a symmetric matrix of order $n\times n$. Then we perform economy (or reduced) singular value decomposition (SVD) on $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}=\mathbf{U}\mathbf{\Sigma}\mathbf{V}^{\top}$.
 Since $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}\mathbf{P}^{\top}$ is symmetric, we have
-\begin{equation}
+\begin{equation}\label{e13}
 (\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}\mathbf{P}^{\top}
 =
 \mathbf{U}\mathbf{\Sigma}\mathbf{V}^{\top}\mathbf{P}^{\top}
 =
 \mathbf{P}\mathbf{V}\mathbf{\Sigma}\mathbf{U}^{\top}
 \end{equation}
-and hence we have $\mathbf{U}=\mathbf{P}\mathbf{V}$ and equivalently $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$, since $\mathbf{V}\mathbf{V}^{\top}=\mathbf{I}_{q\times q}$. Note that we can also employ the property that ``each symmetric matrix could be diagonalized'' to obtain the same result. Hence, the necessary condition is proofed. 
+and hence we have $\mathbf{U}=\mathbf{P}\mathbf{V}$ and equivalently $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$ (since $\mathbf{V}\mathbf{V}^{\top}=\mathbf{I}_{q\times q}$). Note that we can also employ the property that ``each symmetric matrix could be diagonalized'' to obtain the same result. Hence, the necessary condition is proofed. 
 
-Now we proof the sufficiency condition. If $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$, then it is easy to check that $\mathbf{\hat{P}}^{\top}\mathbf{\hat{P}}=\mathbf{I}_{q\times q}$. To proof that $\mathbf{X}^{\top}\mathbf{\hat{P}}=\mathbf{0}_{p\times q}$, we can resort the Eq. (\ref{e5}) for help. Since $\mathbf{X}^{\top}\mathbf{X}=\mathbf{I}_{p\times p}$, by left multiplying both sides of Eq. (\ref{e5}) by $\mathbf{X}^{\top}$, we have  
+Now we proof the sufficiency condition. If $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$, then it is easy to check that $\mathbf{\hat{P}}^{\top}\mathbf{\hat{P}}=\mathbf{I}_{q\times q}$. To proof that $\mathbf{X}^{\top}\mathbf{\hat{P}}=\mathbf{0}_{p\times q}$, we can resort the Eq. (\ref{e13}) for help. Since $\mathbf{X}^{\top}\mathbf{X}=\mathbf{I}_{p\times p}$, by left multiplying both sides of Eq. (\ref{e13}) by $\mathbf{X}^{\top}$, we have  
 \begin{equation}
-\mathbf{X}^{\top}(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}=\mathbf{X}^{\top}\mathbf{B}\mathbf{A}^{\top}-\mathbf{X}^{\top}\mathbf{X}\mathbf{X}^{\top}\mathbf{B}\mathbf{A}^{\top}
+\mathbf{0}_{p\times q}
 =
-\mathbf{0}_{p\times n}
+\mathbf{X}^{\top}(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}\mathbf{\hat{P}}^{\top}
+=
+(\mathbf{X}^{\top}-\mathbf{X}^{\top}\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}\mathbf{\hat{P}}^{\top}
+=
+\mathbf{X}^{\top}\mathbf{U}\mathbf{\Sigma}\mathbf{V}^{\top}\mathbf{\hat{P}}^{\top}
+=
+\mathbf{X}^{\top}\mathbf{U}\mathbf{\Sigma}\mathbf{U}^{\top}
 .
 \end{equation}
-It means that $\mathbf{X}^{\top}\mathbf{U}\mathbf{\Sigma}\mathbf{V}^{\top}=\mathbf{0}_{p\times p}$ and hence $\mathbf{X}^{\top}\mathbf{U}=\mathbf{0}_{p\times p}$. Then $\mathbf{X}^{\top}\mathbf{\hat{P}}=\mathbf{X}^{\top}\mathbf{U}\mathbf{V}^{\top}=\mathbf{0}_{p\times q}$.
+It means that $\mathbf{X}^{\top}\mathbf{U}\mathbf{\Sigma}\mathbf{U}^{\top}=\mathbf{0}_{p\times p}$ and hence $\mathbf{X}^{\top}\mathbf{U}=\mathbf{0}_{p\times q}$. Then $\mathbf{X}^{\top}\mathbf{\hat{P}}=\mathbf{X}^{\top}\mathbf{U}\mathbf{V}^{\top}=\mathbf{0}_{p\times q}$.
 
 Besides, since
 \begin{equation}
@@ -225,7 +231,7 @@ Besides, since
 =\|\mathbf{B}\|_{F}^{2}+\|\mathbf{P}\mathbf{A}\|_{F}^{2}-2\text{Tr}(\mathbf{B}^{\top}\mathbf{P}\mathbf{A}),
 \end{split}
 \end{equation}
-Until now, if we want to proof that $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$ is the solution of problem (3), $\text{Tr}(\mathbf{B}^{\top}\mathbf{\hat{P}}\mathbf{A})$ has to be a maximum if $\|\mathbf{B}-\mathbf{\hat{P}}\mathbf{A}\|_{F}^{2}$ is to be a minimum, as long as $\mathbf{P}$ satisfying the conditions in Eq. (3).
+if we want to proof that $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$ is the solution of problem (\ref{e4}), $\text{Tr}(\mathbf{B}^{\top}\mathbf{\hat{P}}\mathbf{A})$ has to be a maximum if $\|\mathbf{B}-\mathbf{\hat{P}}\mathbf{A}\|_{F}^{2}$ is to be a minimum, as long as $\mathbf{P}$ satisfying the conditions in problem (\ref{e4}).
 Note that by cyclic perturbation which retains the trace unchanged and due to $\mathbf{X}^{\top}\mathbf{\hat{P}}=\mathbf{0}_{p\times q}$, we have 
 \begin{equation}
 \begin{split}
@@ -247,24 +253,26 @@ Note that by cyclic perturbation which retains the trace unchanged and due to $\
 \text{Tr}(\mathbf{\Sigma}).
 \end{split}
 \end{equation}
-Now we need to proof that $\text{Tr}(\mathbf{\Sigma})\ge\text{Tr}(\mathbf{B}^{\top}\mathbf{P}\mathbf{A})$ for every $\mathbf{P}$ satisfying that $\mathbf{P}^{\top}\mathbf{P} = \mathbf{I}_{q\times q}, \mathbf{X}^{\top}\mathbf{P} = \mathbf{0}_{p\times q}$. 
-Since $\text{Tr}(\mathbf{B}^{\top}\mathbf{P}\mathbf{A})
+Now we need to proof that $\text{Tr}(\mathbf{\Sigma})\ge\text{Tr}(\mathbf{B}^{\top}\mathbf{P}\mathbf{A})$ for every $\mathbf{P}$ satisfying that $\mathbf{P}^{\top}\mathbf{P} = \mathbf{I}_{q\times q}, \mathbf{X}^{\top}\mathbf{P} = \mathbf{0}_{p\times q}$. Note that $\text{Tr}(\mathbf{B}^{\top}\mathbf{P}\mathbf{A})
 =
 \text{Tr}((\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}\mathbf{P}^{\top})
 =
 \text{Tr}(\mathbf{U}\mathbf{\Sigma}\mathbf{V}^{\top}\mathbf{P}^{\top})
+=
+\text{Tr}(\mathbf{\Sigma}\mathbf{V}^{\top}\mathbf{P}^{\top}\mathbf{U})$. 
+By using a generalization version \cite{TenBerge1983} of the Kristof's Theorem \cite{Kristof1970515}, we have $\text{Tr}(\mathbf{B}^{\top}\mathbf{P}\mathbf{A})
 =
 \text{Tr}(\mathbf{\Sigma}\mathbf{V}^{\top}\mathbf{P}^{\top}\mathbf{U})
 \le
 \text{Tr}(\mathbf{\Sigma})
 .
 $
-The last inequality can be obtained by using a generalization version \cite{TenBerge1983} of the Kristof's Theorem \cite{Kristof1970515}. The equality is obtained at 
+The equality is obtained at 
 $\mathbf{V}^{\top}\mathbf{P}^{\top}\mathbf{U}=\mathbf{I}_{q\times q}$, i.e., $\mathbf{P}=\mathbf{U}\mathbf{V}^{\top}=\mathbf{\hat{P}}$. This completes the proof.$\hfill\blacksquare$ 
 
-Note that if the partially known prior were not present, the solution is clearly the solution of the original orthogonal Procrustes problem, i.e., $\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}$ and $\mathbf{V}$ are the orthogonal matrices obtained by performing economy (a.k.a. reduced) SVD:
+Note that if the partially known columns were not present,which means $\mathbf{X}=\oldemptyset$, the solution is clearly reduced to the solution of the original orthogonal Procrustes problem, i.e., $\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}$ and $\mathbf{V}$ are the orthogonal matrices obtained by performing economy (a.k.a. reduced) SVD:
 $\mathbf{B}\mathbf{A}^{\top} = \mathbf{U}\mathbf{\mathbf{\Sigma}}\mathbf{V}^{\top}$. 
-The difference between the solutions of the original orthogonal Procrustes problem and its partially known prior version quantify the effect on the residual of requiring $\mathbf{P}$ to be orthogonal to the external prior $\mathbf{P}^{\top}\mathbf{X}$.
+The difference between the two solutions could reflect the effect on the residual difference of requiring $\mathbf{P}$ to be orthogonal to the additional constraints, i.e., $\mathbf{X}^{\top}\mathbf{P}=\mathbf{0}_{p\times q}$.
 
 
 \section{Uniqueness of Solution $\mathbf{\hat{P}}$}
