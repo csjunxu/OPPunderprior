@@ -131,7 +131,7 @@ $\mathbf{B}^{*}=\mathbf{B}-\mathbf{X}\mathbf{A}_{X}^{\top}$. In the following Re
 \mathbf{P}^{\top}\mathbf{P} = \mathbf{I}_{q\times q}, \mathbf{X}^{\top}\mathbf{P} = \mathbf{0}_{p\times q} 
 \end{equation}
 is $\mathbf{\hat{P}} = \mathbf{U}\mathbf{V}^{\top}$, where $\mathbf{U}\in \mathbb{R}^{n\times q}$ and $\mathbf{V}\in \mathbb{R}^{q\times q}$ are the orthogonal matrices obtained by performing economy (a.k.a. reduced) SVD:
-\begin{equation}
+\begin{equation}\label{e5}
 (\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top} = \mathbf{U}\mathbf{\mathbf{\Sigma}}\mathbf{V}^{\top}
 \end{equation}
 
@@ -209,7 +209,7 @@ Since $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^
 \end{equation}
 and hence we have $\mathbf{U}=\mathbf{P}\mathbf{V}$ and equivalently $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$, since $\mathbf{V}\mathbf{V}^{\top}=\mathbf{I}_{q\times q}$. Note that we can also employ the property that ``each symmetric matrix could be diagonalized'' to obtain the same result. Hence, the necessary condition is proofed. 
 
-Now we proof the sufficiency condition. If $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$, then $\mathbf{\hat{P}}$ satisfies that $\mathbf{\hat{P}}^{\top}\mathbf{\hat{P}}=\mathbf{I}_{q\times q}$ and $\mathbf{X}^{\top}\mathbf{\hat{P}}=\mathbf{0}_{p\times q}$. The first is obvious and now we consider the second one. From the Eq. (4), since $\mathbf{X}^{\top}\mathbf{X}=\mathbf{I}_{p\times p}$, we have  
+Now we proof the sufficiency condition. If $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$, then it is easy to check that $\mathbf{\hat{P}}^{\top}\mathbf{\hat{P}}=\mathbf{I}_{q\times q}$. To proof that $\mathbf{X}^{\top}\mathbf{\hat{P}}=\mathbf{0}_{p\times q}$, we can resort the Eq. (\ref{e5}) for help. Since $\mathbf{X}^{\top}\mathbf{X}=\mathbf{I}_{p\times p}$, we have  
 \begin{equation}
 \mathbf{X}^{\top}(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}=\mathbf{X}^{\top}\mathbf{B}\mathbf{A}^{\top}-\mathbf{X}^{\top}\mathbf{X}\mathbf{X}^{\top}\mathbf{B}\mathbf{A}^{\top}
 =

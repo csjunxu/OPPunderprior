@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  19 JAN 2017 20:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  19 JAN 2017 20:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -364,10 +364,10 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 ] [2] [3] [4]
 [5] (./OPP1.bbl [6]) [7] (./OPP1.aux) ) 
 Here is how much of TeX's memory you used:
- 3485 strings out of 493091
- 46020 string characters out of 6134517
- 109083 words of memory out of 5000000
- 6855 multiletter control sequences out of 15000+600000
+ 3486 strings out of 493091
+ 46024 string characters out of 6134517
+ 109091 words of memory out of 5000000
+ 6856 multiletter control sequences out of 15000+600000
  30129 words of font info for 79 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  38i,17n,26p,1917b,217s stack positions out of 5000i,500n,10000p,200000b,80000s
