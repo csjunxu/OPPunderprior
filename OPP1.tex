@@ -74,7 +74,7 @@ Abstract\vskip3pt
 
 
 \begin{abstract}
-The orthogonal Procrustes problem aims to find an orthogonal matrix which transforms one given matrix into another by minimizing their Frobenius matrix norm. This problem can be applied in applications such as permutation theory, machine learning, and camera calibration, \emph{etc}. In real cases, the permutation matrix may have been partially known, the dictionaries can be partially learned from external data, and the calibration of camera should be done under some fixed priors. This prior information makes the original orthogonal Procrustes problem more difficult. In this paper, we consider the solution of this problem under partially known priors, which includes the original orthogonal Procrustes problem as a special case with no such prior.
+The orthogonal Procrustes problem aims to find an orthogonal matrix $\mathbf{T}$ which transforms one given matrix $\mathbf{A}$ into another one $\mathbf{B}$ by minimizing the residual difference under Frobenius matrix norm, i.e., $\|\mathbf{B}-\mathbf{T}\mathbf{A}\|_{F}^{2}$. This problem can be applied in factor analysis, dictionary learning, camera calibration, and robotics \emph{etc}. In many real applications, some certain factors may have been partially known previously, some dictionary items could be partially learned beforehand, and some certain axises could be fixed before the calibration of camera,\emph{etc}. All these prior information can be viewed as partially known guidance and would influence the whole orthogonal transformation matrix, and hence makes the original orthogonal Procrustes problem more difficult. In this paper, we studied the solution of orthogonal Procrustes problem under partially known guidance, which includes the original orthogonal Procrustes problem as a special case.
 \begin{keywords}
 orthogonal Procrustes problem, partially known guidance
 \end{keywords}
@@ -335,8 +335,7 @@ Thus, we obtain that $\mathbf{P}=\mathbf{U}\mathbf{D}\mathbf{V}^{\top}$, where $
 
 
 \section{Concluding Remarks}
-
-
+In this paper, we studied the classical orthogonal Procrustes problem and gave the solution of this problem under partially known guidance, which included the original orthogonal Procrustes problem as a special case (i.e., when there is no guidance at all). Since the orthogonal Procrustes problem had been generalized to two-sided version \cite{schonemann1968two} and weighted version \cite{Lissitz1976,Koschat1991}, we are highly motivated to study these generalized problems under partially known guidance.
 
 \bibliographystyle{unsrt}%{ieee}%{unsrt}
 \bibliography{egbib}
