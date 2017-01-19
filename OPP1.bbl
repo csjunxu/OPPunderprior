@@ -22,6 +22,23 @@ Peter~H Sch{\"o}nemann.
 \newblock On two-sided orthogonal procrustes problems.
 \newblock {\em Psychometrika}, 33(1):19--33, 1968.
 
+\bibitem{Lissitz1976}
+Robert~W. Lissitz, Peter~H. Sch{\"o}nemann, and James~C. Lingoes.
+\newblock A solution to the weighted procrustes problem in which the
+  transformation is in agreement with the loss function.
+\newblock {\em Psychometrika}, 41(4):547--550, 1976.
+
+\bibitem{Koschat1991}
+Martin~A. Koschat and Deborah~F. Swayne.
+\newblock A weighted procrustes criterion.
+\newblock {\em Psychometrika}, 56(2):229--239, 1991.
+
+\bibitem{viklands2006algorithms}
+Thomas Viklands.
+\newblock Algorithms for the weighted orthogonal procrustes problem and other
+  least squares problems.
+\newblock {\em PhD Thesis}, 2006.
+
 \bibitem{higham1988symmetric}
 Nicholas~J Higham.
 \newblock The symmetric procrustes problem.

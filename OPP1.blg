@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: OPP1.aux
 The style file: unsrt.bst
 Database file #1: egbib.bib
-You've used 15 entries,
+You've used 18 entries,
             1791 wiz_defined-function locations,
-            552 strings with 5709 characters,
-and the built_in function-call counts, 3459 in all, are:
-= -- 345
-> -- 86
+            570 strings with 6181 characters,
+and the built_in function-call counts, 4081 in all, are:
+= -- 404
+> -- 109
 < -- 0
-+ -- 37
-- -- 22
-* -- 274
-:= -- 541
-add.period$ -- 45
-call.type$ -- 15
-change.case$ -- 15
++ -- 46
+- -- 28
+* -- 318
+:= -- 642
+add.period$ -- 54
+call.type$ -- 18
+change.case$ -- 18
 chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 135
-empty$ -- 362
-format.name$ -- 22
-if$ -- 747
+cite$ -- 18
+duplicate$ -- 161
+empty$ -- 424
+format.name$ -- 28
+if$ -- 881
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 15
-newline$ -- 78
-num.names$ -- 15
-pop$ -- 15
+int.to.str$ -- 18
+missing$ -- 18
+newline$ -- 93
+num.names$ -- 18
+pop$ -- 20
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 47
+skip$ -- 57
 stack$ -- 0
-substring$ -- 370
-swap$ -- 15
+substring$ -- 420
+swap$ -- 18
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 43
-width$ -- 17
-write$ -- 167
+while$ -- 50
+width$ -- 20
+write$ -- 199
