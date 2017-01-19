@@ -122,11 +122,11 @@ When the partially known columns $\mathbf{X}\neq\oldemptyset$, we crop the matri
 Here, $\mathbf{B}-\mathbf{X}\mathbf{A}_{X}^{\top}$ is a known data matrix and we replace it with 
 $\mathbf{B}^{*}=\mathbf{B}-\mathbf{X}\mathbf{A}_{X}^{\top}$. In the following Results 1, we remove the notation $*$ and use $\mathbf{B}$ to replace $\mathbf{B}-\mathbf{X}\mathbf{A}_{X}^{\top}$ as the finally known data matrix. Besides, we remove the subscript $P$ in $\mathbf{A}_{P}$ for symbol simplicity.
 
-\textbf{Results 1}: Let $\mathbf{A}\in \mathbb{R}^{q\times m}$, $\mathbf{B}\in \mathbb{R}^{n\times m}$ be two given data matrices, given partially known prior of $\mathbf{X}^{\top}\mathbf{X}=\mathbf{I}_{p\times p}$. Then the sufficiency and necessary conditions of
+\textbf{Results 1}: Let $\mathbf{A}\in \mathbb{R}^{q\times m}$, $\mathbf{B}\in \mathbb{R}^{n\times m}$ be two given data matrices, given partially known prior of $\mathbf{X}^{\top}\mathbf{X}=\mathbf{I}_{p\times p}$, then the sufficiency and necessary conditions of
 \begin{equation}
 \mathbf{\hat{P}}=\arg\min_{\mathbf{P}}\|\mathbf{B}-\mathbf{P}\mathbf{A}\|_{F}^{2}
 \quad
-s.t.
+\text{s.t.}
 \quad
 \mathbf{P}^{\top}\mathbf{P} = \mathbf{I}_{q\times q}, \mathbf{X}^{\top}\mathbf{P} = \mathbf{0}_{p\times q} 
 \end{equation}
