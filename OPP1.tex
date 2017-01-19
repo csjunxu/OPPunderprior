@@ -50,7 +50,7 @@
 
 \linespacing{1}
 
-\title{Solutions of Orthogonal Procrustes Problems under Partially Known columns}
+\title{Solutions of Orthogonal Procrustes Problems with Partially Known columns}
 
 \author{Jun Xu and David Zhang }
 
@@ -297,13 +297,13 @@ can be determined up to orientation. Hence, we can reformulate the SVD as
 \end{equation}
 where $\mathbf{U}^{*}\in \mathbb{R}^{n\times q}$ and $\mathbf{V}^{*}\in \mathbb{R}^{q\times q}$ are arbitrarily orientated singular vectors of $\mathbf{U}$ and $\mathbf{V}$, respectively. $\mathbf{\Sigma}\in \mathbb{R}^{q\times q}$ are diagonal matrix with singular values are arranged in weak descending order along the diagonal, i.e., $\mathbf{\Sigma}_{11}\ge\mathbf{\Sigma}_{22}\ge...\ge\mathbf{\Sigma}_{qq}\ge0$. The $\mathbf{K}_{u}$ and $\mathbf{K}_{v}$ are diagonal matrices with $+1$ or $-1$ as diagonal elements in arbitrary distribution. If we fix $\mathbf{K}_{u}$, then $\mathbf{K}_{v}$ is uniquely determined to meet the requirement that the diagonal elements of $\mathbf{\Sigma}$ should be nonnegative. And the orientations of the singular vectors of $\mathbf{U}^{*}$ is fixed, then the $\mathbf{U}=\mathbf{U}^{*}\mathbf{K}_{u}$ is determined, so does the orientations of the singular vectors of $\mathbf{V}^{*}$ and $\mathbf{V}^{\top}=\mathbf{K}_{v}(\mathbf{V}^{*})^{\top}$. In this case, the solution of $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}=\mathbf{U}^{*}\mathbf{K}_{u}\mathbf{K}_{v}(\mathbf{V}^{*})^{\top}$ is unique. The case that the $\mathbf{\Sigma}$ have multiple singular values also has unique solution of $\mathbf{\hat{P}}$, which can be discussed in a similar way. 
 
-If $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}$ is singular, then $0\le r=\text{rank}(\mathbf{\Sigma})< q$, and there is $q-r$ (at least one) zero singular values. The previous discussion on non-degenerative case still can be applied to the singular vectors related to the nonzero singular values, and this part is still unique. However, the singular vectors related to the zero singular values could be in arbitrary orientations as long as they satisfy the orthogonal conditions that $\mathbf{U}^{\top}\mathbf{U}=\mathbf{V}^{\top}\mathbf{V}=\mathbf{V}\mathbf{V}^{\top}=\mathbf{I}_{q\times q}$. Note that $\mathbf{U}\in \mathbb{R}^{n\times q}$, so $\mathbf{U}\mathbf{U}^{\top}$ no longer equals to the identity matrix of order $n$. From Eq. (12), we can get 
+If $(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\mathbf{B}\mathbf{A}^{\top}$ is singular, then $0\le r=\text{rank}(\mathbf{\Sigma})< q$, and there is $q-r$ (at least one) zero singular values. The previous discussion on nonsingular case still can be applied to the singular vectors corresponding to the nonzero singular values, and the production of these singular vectors in $\mathbf{U}$ and $\mathbf{V}$ is still unique. However, the singular vectors corresponding to the zero singular values could be in arbitrary orientations as long as they satisfy the orthogonal conditions that $\mathbf{U}^{\top}\mathbf{U}=\mathbf{V}^{\top}\mathbf{V}=\mathbf{V}\mathbf{V}^{\top}=\mathbf{I}_{q\times q}$. Note that $\mathbf{U}\in \mathbb{R}^{n\times q}$, so $\mathbf{U}\mathbf{U}^{\top}$ no longer equals to the identity matrix of order $n\times n$. From Eq. (\ref{e13}), we can get 
 \begin{equation}
 \mathbf{U}\mathbf{\Sigma}\mathbf{V}^{\top}\mathbf{P}^{\top}
 =
 \mathbf{P}\mathbf{V}\mathbf{\Sigma}\mathbf{U}^{\top}
 \end{equation}
-Right multiplying each side by $\mathbf{P}\mathbf{V}$ and then left multiplying each side by $\mathbf{U}^{\top}$, we can get  
+Right multiplying both sides by $\mathbf{P}\mathbf{V}$ and then left multiplying each side by $\mathbf{U}^{\top}$, we can get that 
 \begin{equation}
 \mathbf{\Sigma}
 =
@@ -316,7 +316,7 @@ Hence, we can define a diagonal matrix $\mathbf{D}=\mathbf{U}^{\top}\mathbf{P}\m
 \pm 1 & \textrm{if $r< i \le q$}.\\
 \end{array} \right.
 \end{displaymath}
-Thus, we obtain that $\mathbf{P}=\mathbf{U}\mathbf{D}\mathbf{V}^{\top}$, where $\mathbf{D}$ is defined above. Hence, once we get the solution of $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$ in problem (3), the final solution for $\mathbf{P}$ when $\text{rank}(\mathbf{\Sigma})<q$ is not unique since the matrix $\mathbf{D}$ is not uniquely determined. In fact, since the number of $\mathbf{D}$ with different diagonal combinations is $2^{q-r}$, the number of solutions for $\mathbf{P}$ is $2^{q-r}$ given fixed $\mathbf{U}$ and $\mathbf{V}$.
+Thus, we obtain that $\mathbf{P}=\mathbf{U}\mathbf{D}\mathbf{V}^{\top}$, where $\mathbf{D}$ is defined above. That is to say, when $\text{rank}(\mathbf{\Sigma})<q$ , once we get the solution of $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V}^{\top}$ in problem (\ref{e4}), the final solutions for problem (\ref{e4}) are not unique and determined up to the specific matrix $\mathbf{D}$. In fact, since the number of $\mathbf{D}$ with different diagonal combinations is $2^{q-r}$, the number of solutions $\mathbf{P}$ for problem (\ref{e4}) is $2^{q-r}$ given fixed $\mathbf{U}$ and $\mathbf{V}$.
 
 %Since the solution of $\mathbf{\hat{P}}$ is not unique when $\text{rank}(\mathbf{\Sigma})<q$, we define the set of solutions for in a formal manner and discuss its properties. The solution set can be defined as:
 %\begin{equation}
@@ -336,7 +336,7 @@ Thus, we obtain that $\mathbf{P}=\mathbf{U}\mathbf{D}\mathbf{V}^{\top}$, where $
 
 
 \section{Concluding Remarks}
-In this paper, we studied the classical orthogonal Procrustes problem and gave the solution of this problem under partially known guidance, which included the original orthogonal Procrustes problem as a special case (i.e., when there is no guidance at all). Since the orthogonal Procrustes problem had been generalized to two-sided version \cite{schonemann1968two} and weighted version \cite{Lissitz1976,Koschat1991}, we are highly motivated to study these generalized problems under partially known guidance.
+In this paper, we studied the classical orthogonal Procrustes problem and gave the solution of a generalized version of the original problem with partially known columns, which included the original orthogonal Procrustes problem as a special case (i.e., when there is no guidance at all). Since the orthogonal Procrustes problem had been generalized to two-sided version \cite{schonemann1968two} and weighted version \cite{Lissitz1976,Koschat1991}, we are highly motivated to study these generalized problems under partially known guidance.
 
 \linespacing{0.5}
 \bibliographystyle{unsrt}%{ieee}%{unsrt}
