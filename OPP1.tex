@@ -222,7 +222,7 @@ Now we proof the sufficiency condition. If $\mathbf{\hat{P}}=\mathbf{U}\mathbf{V
 \mathbf{X}^{\top}\mathbf{U}\mathbf{\Sigma}\mathbf{U}^{\top}
 .
 \end{equation}
-It means that $\mathbf{X}^{\top}\mathbf{U}\mathbf{\Sigma}\mathbf{U}^{\top}=\mathbf{0}_{p\times p}$ and hence $\mathbf{X}^{\top}\mathbf{U}=\mathbf{0}_{p\times q}$. Then $\mathbf{X}^{\top}\mathbf{\hat{P}}=\mathbf{X}^{\top}\mathbf{U}\mathbf{V}^{\top}=\mathbf{0}_{p\times q}$.
+It means that $\mathbf{X}^{\top}\mathbf{U}\mathbf{\Sigma}\mathbf{U}^{\top}=\mathbf{0}_{p\times p}$ and hence $\mathbf{X}^{\top}\mathbf{U}=\mathbf{0}_{p\times q}$ if $\mathbf{\Sigma}$ is of full rank. Then $\mathbf{X}^{\top}\mathbf{\hat{P}}=\mathbf{X}^{\top}\mathbf{U}\mathbf{V}^{\top}=\mathbf{0}_{p\times q}$.
 
 Besides, since
 \begin{equation}
@@ -277,7 +277,7 @@ The difference between the two solutions could reflect the effect on the residua
 
 \section{Uniqueness of Solution $\mathbf{\hat{P}}$}
 
-Now we discuss the uniqueness of the solution $\mathbf{\hat{P}}$. Our discussion is according to the rankness of the $\mathbf{\Sigma}$ generated in the SVD. We first give a lemma describing the rank of $\mathbf{X}\mathbf{X}^{\top}$ where $\mathbf{X}\in\mathbb{R}^{n\times p}$ is the partially known orthogonal matrix. 
+Now we discuss the uniqueness of the solution $\mathbf{\hat{P}}$. Our discussion is according to the rankness of the $\mathbf{\Sigma}$ generated in the SVD. We first give a lemma describing the rank of $\mathbf{X}\mathbf{X}^{\top}$ where $\mathbf{X}\in\mathbb{R}^{n\times p}$ is the orthogonal matrix consisting of partially known columns. 
 
 \emph{Lemma 1}: Let $\mathbf{X}\in\mathbb{R}^{n\times p}$ be orthogonal matrix with $\mathbf{X}^{\top}\mathbf{X}=\mathbf{I}_{p\times p}$, then $\text{rank}(\mathbf{I}_{n\times n}-\mathbf{X}\mathbf{X}^{\top})\ge n-p$.
 
